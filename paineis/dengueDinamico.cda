@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="anoSelectorDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="dadosSelecaoDS" type="kettle.TransFromFile">
+         <KtrFile>dadosSelecao.ktr</KtrFile>
+         <variables datarow-name="ANO"/>
+         <variables datarow-name="OPCAO"/>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="anoSelectorDS"
+               id="anoSelectorDS"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>select distinct ddte_ano&#xD;
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)&#xD;
+order by ddte_ano desc</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="dadosSelecaoDS"
+               id="dadosSelecaoDS"
+               type="kettle">
+      <Columns/>
+      <Parameters>
+         <Parameter default="" name="ANO" type="String"/>
+         <Parameter default="" name="OPCAO" type="String"/>
+      </Parameters>
+      <Query>ResultQuery</Query>
+   </DataAccess>
+</CDADescriptor>

@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="BarChartHistoricoDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="BarChartCicloAnoDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaIIPNaceDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaIIPMunicipioDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaPendNaceDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaPendMunicipioDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaPercVisitaNaceDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaPercVisitaMunicipioDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="BarChartMicroregiaoDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="BarChartMicroregiaoMesDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartHistoricoDS"
+               id="BarChartHistoricoDS"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>SELECT Cast(tb1.ddtan_ano AS CHAR(4)) AS ano,
+       ROUND(CAST(SUM(tb1.iip) AS NUMERIC),2) AS "Indice de Infestacao Predial",
+       ROUND(CAST(SUM(tb1.pendencia) AS NUMERIC),2) AS "Pendencia",
+       ROUND(CAST(tb1.perc_visitado AS NUMERIC),2) AS "% Visitado"
+FROM
+    (SELECT b.ddtan_ano,
+       CASE WHEN (SELECT COUNT(a1.ddmu_id)
+			FROM dengue.dengue_f_entomologico a1 
+				INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        	INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        	INNER JOIN dengue.dengue_d_tempo_mes e1 ON (a1.ddtm_id = e1.ddtm_id)
+			WHERE b1.ddtan_ano = b.ddtan_ano
+				AND d1.ddco_informado = 'T'
+                        	AND e1.ddtm_mes = e.ddtm_mes) = 0
+       THEN SUM(a.iden_iip)
+       ELSE ROUND(CAST(SUM(a.iden_iip) /(SELECT COUNT(a2.ddmu_id)
+						FROM dengue.dengue_f_entomologico a2 
+							INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+					    		INNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)
+							INNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)
+				                     INNER JOIN dengue.dengue_d_tempo_mes e2 ON (a2.ddtm_id = e2.ddtm_id)
+						WHERE b2.ddtan_ano = b.ddtan_ano
+							AND d2.ddco_informado = 'T'
+                        				AND e2.ddtm_mes = e.ddtm_mes) AS NUMERIC),2)
+       END AS iip,
+       
+       CASE WHEN (SELECT COUNT(a1.ddmu_id)
+			FROM dengue.dengue_f_entomologico a1 
+                     	INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        	INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        	INNER JOIN dengue.dengue_d_tempo_mes e1 ON (a1.ddtm_id = e1.ddtm_id)
+			WHERE b1.ddtan_ano = b.ddtan_ano
+				AND d1.ddco_informado = 'T'
+                    		AND e1.ddtm_mes = e.ddtm_mes) = 0
+       THEN SUM(a.iden_pendencia)
+       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT COUNT(a2.ddmu_id)
+						FROM dengue.dengue_f_entomologico a2 
+				              	INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+					    		INNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)
+                        				INNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)
+                        				INNER JOIN dengue.dengue_d_tempo_mes e2 ON (a2.ddtm_id = e2.ddtm_id)
+						WHERE b2.ddtan_ano = b.ddtan_ano
+							AND d2.ddco_informado = 'T'
+                    					AND e2.ddtm_mes = e.ddtm_mes) AS NUMERIC),2)
+       END AS pendencia,
+       
+       CASE WHEN (SELECT SUM(a1.iden_visita_meta)
+			FROM dengue.dengue_f_entomologico a1 
+                     	INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        	INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        	INNER JOIN dengue.dengue_d_tempo_mes e1 ON (a1.ddtm_id = e1.ddtm_id)
+			WHERE b1.ddtan_ano = b.ddtan_ano
+				AND d1.ddco_informado = 'T') = 0
+       THEN SUM(a.iden_visita_realizada)
+       ELSE ROUND(CAST((SELECT(SUM(a2.iden_visita_realizada)*100)/SUM(a2.iden_visita_meta) AS perc_visitado_inf
+				FROM dengue.dengue_f_entomologico a2 
+					INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+					INNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)
+                        		INNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)
+                        		INNER JOIN dengue.dengue_d_tempo_mes e2 ON (a2.ddtm_id = e2.ddtm_id)
+				WHERE b2.ddtan_ano = b.ddtan_ano
+					AND d2.ddco_informado = 'T') AS NUMERIC),2)
+       END AS perc_visitado,
+       d.ddco_informado
+       
+	FROM dengue.dengue_f_entomologico a 
+    		INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    		INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    		INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+        	INNER JOIN dengue.dengue_d_tempo_mes e ON (a.ddtm_id = e.ddtm_id)
+	GROUP BY b.ddtan_ano, e.ddtm_mes, d.ddco_informado
+	HAVING d.ddco_informado = 'T') as tb1
+GROUP BY tb1.ddtan_ano, tb1.perc_visitado
+ORDER BY tb1.ddtan_ano</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartCicloAnoDS"
+               id="BarChartCicloAnoDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+      </Parameters>
+      <Query>SELECT CAST(e.ddtc_ciclo AS varchar(1)) AS ciclo,
+       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS iip_inf
+    		FROM dengue.dengue_f_entomologico a1 
+                INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)
+			WHERE b1.ddtan_ano = ${ano}
+				AND d1.ddco_informado = 'T'
+                AND e1.ddtc_ciclo = e.ddtc_ciclo) = 0
+       THEN SUM(a.iden_iip)
+       ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a1.ddmu_id) AS iip_inf
+					FROM dengue.dengue_f_entomologico a1 
+                        INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+ 		                INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        AND e1.ddtc_ciclo = e.ddtc_ciclo) AS NUMERIC),2)
+       END AS "Indice de Infestacao Predial",
+       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS pend_inf
+			FROM dengue.dengue_f_entomologico a1 
+                INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+ 		        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)
+			WHERE b1.ddtan_ano = ${ano}
+				AND d1.ddco_informado = 'T'
+                AND e1.ddtc_ciclo = e.ddtc_ciclo) = 0
+       THEN SUM(a.iden_pendencia)
+       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT COUNT(a1.ddmu_id) AS pend_inf
+					FROM dengue.dengue_f_entomologico a1 
+                        INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+ 		        		INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        AND e1.ddtc_ciclo = e.ddtc_ciclo) AS NUMERIC),2)
+       END AS "Pendencia",
+       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS pend_inf
+			FROM dengue.dengue_f_entomologico a1 
+                INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+ 		        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)
+			WHERE b1.ddtan_ano = ${ano}
+				AND d1.ddco_informado = 'T'
+                AND e1.ddtc_ciclo = e.ddtc_ciclo) = 0
+       THEN SUM(a.iden_perc_visitado)
+       ELSE ROUND(CAST((SELECT (SUM(a1.iden_visita_realizada)*100)/SUM(a1.iden_visita_meta) AS pend_inf
+					FROM dengue.dengue_f_entomologico a1 
+                        INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        AND e1.ddtc_ciclo = e.ddtc_ciclo) AS NUMERIC),2)
+       END AS "% Visitado"
+
+FROM dengue.dengue_f_entomologico a 
+    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_ciclo)
+WHERE b.ddtan_ano = ${ano}
+GROUP BY e.ddtc_ciclo
+ORDER BY e.ddtc_ciclo</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="mapaIIPNaceDS"
+               id="mapaIIPNaceDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT 'NACE'||CAST(c.ddmu_nace AS varchar(30)) AS "nace",
+       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS iip_inf
+    		FROM dengue.dengue_f_entomologico a1 
+				INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+			WHERE b1.ddtan_ano = ${ano}
+				AND d1.ddco_informado = 'T'
+                		AND e1.ddtc_ciclo = ${ciclo}
+                		AND c1.ddmu_nace = c.ddmu_nace) = 0
+       THEN SUM(a.iden_iip)
+       ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a1.ddmu_id) AS iip_inf
+					FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        			AND e1.ddtc_ciclo = ${ciclo}
+                    				AND c1.ddmu_nace = c.ddmu_nace) AS NUMERIC),2)
+       END AS iip
+FROM dengue.dengue_f_entomologico a 
+    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)
+WHERE b.ddtan_ano = ${ano}
+AND e.ddtc_ciclo = ${ciclo}
+GROUP BY c.ddmu_nace</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaIIPMunicipioDS"
+               id="mapaIIPMunicipioDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT CAST(c.ddmu_municipio AS varchar(30)) as "municipio",&#xD;
+       CASE WHEN (SELECT COUNT(a1.ddmu_id) as iip_inf&#xD;
+    		FROM dengue.dengue_f_entomologico a1&#xD;
+				INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)&#xD;
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)&#xD;
+                		INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)&#xD;
+                		INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)&#xD;
+			WHERE b1.ddtan_ano = ${ano}&#xD;
+            			AND c1.ddmu_id = c.ddmu_id&#xD;
+                		AND d1.ddco_informado = 'T'&#xD;
+                		AND e1.ddtc_ciclo = ${ciclo}) = 0&#xD;
+       THEN SUM(a.iden_iip)&#xD;
+       ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a1.ddmu_id) as iip_inf&#xD;
+					FROM dengue.dengue_f_entomologico a1&#xD;
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)&#xD;
+						INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)&#xD;
+                				INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)&#xD;
+                				INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)&#xD;
+					WHERE b1.ddtan_ano = ${ano}&#xD;
+	                    			AND c1.ddmu_id = c.ddmu_id&#xD;
+            					AND d1.ddco_informado = 'T'&#xD;
+                        			AND e1.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)&#xD;
+       END AS iip&#xD;
+FROM dengue.dengue_f_entomologico a &#xD;
+    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)&#xD;
+    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)&#xD;
+    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)&#xD;
+    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)&#xD;
+WHERE b.ddtan_ano = ${ano}&#xD;
+	AND e.ddtc_ciclo = ${ciclo}&#xD;
+GROUP BY c.ddmu_municipio, c.ddmu_id</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600" connection="mapaPendNaceDS"
+               id="mapaPendNaceDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT 'NACE'||CAST(c.ddmu_nace AS varchar(30)) AS "nace",
+       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS pend_inf
+    		FROM dengue.dengue_f_entomologico a1 
+				INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                		INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                		INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+			WHERE b1.ddtan_ano = ${ano}
+            			AND e1.ddtc_ciclo = ${ciclo}
+				AND d1.ddco_informado = 'T'
+		              AND c1.ddmu_nace = c.ddmu_nace) = 0
+       THEN SUM(a.iden_pendencia)
+       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT COUNT(a1.ddmu_id) AS iip_inf
+					FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    	INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        			INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        			INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+	                    			AND e1.ddtc_ciclo = ${ciclo}
+						AND d1.ddco_informado = 'T'
+                    				AND c1.ddmu_nace = c.ddmu_nace)  AS NUMERIC),2)
+       END AS pendencia
+FROM dengue.dengue_f_entomologico a 
+    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)
+WHERE b.ddtan_ano = ${ano}
+	AND e.ddtc_ciclo = ${ciclo}
+GROUP BY c.ddmu_nace</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaPendMunicipioDS"
+               id="mapaPendMunicipioDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT c.ddmu_municipio, 
+       CASE WHEN (SELECT count(a1.ddmu_id) as pend_inf
+    		FROM dengue.dengue_f_entomologico a1
+				INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+				INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                		INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                		INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+			WHERE b1.ddtan_ano = ${ano}
+	            		AND c1.ddmu_id = c.ddmu_id
+                		AND d1.ddco_informado = 'T'
+            			AND e1.ddtc_ciclo = ${ciclo}) = 0
+       THEN SUM(a.iden_pendencia)
+       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT count(a1.ddmu_id) as pend_inf
+					FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    	INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        			INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        			INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+	                    			AND c1.ddmu_id = c.ddmu_id
+                        			AND d1.ddco_informado = 'T'
+	                    			AND e1.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+       END AS pendencia
+FROM dengue.dengue_f_entomologico a 
+	INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    	INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    	INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+    	INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)
+WHERE b.ddtan_ano = ${ano}
+	AND e.ddtc_ciclo = ${ciclo}
+GROUP BY c.ddmu_municipio, c.ddmu_id
+ORDER BY c.ddmu_municipio</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaPercVisitaNaceDS"
+               id="mapaPercVisitaNaceDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT 'NACE'||CAST(c.ddmu_nace AS varchar(30)) AS "nace",
+       CASE WHEN (SELECT SUM(a1.iden_visita_meta) AS perc_visitado_inf
+    				FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        AND e1.ddtc_ciclo = ${ciclo}
+                    	AND c1.ddmu_nace = c.ddmu_nace) = 0
+       THEN SUM(a.iden_visita_realizada)
+       ELSE ROUND(CAST((SELECT(SUM(a1.iden_visita_realizada)*100)/SUM(a1.iden_visita_meta) AS perc_visitado_inf
+					FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        AND e1.ddtc_ciclo = ${ciclo}
+                    	AND c1.ddmu_nace = c.ddmu_nace) AS NUMERIC),2)
+       END AS perc_visitado
+FROM dengue.dengue_f_entomologico a 
+    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)
+WHERE b.ddtan_ano = ${ano}
+AND e.ddtc_ciclo = ${ciclo}
+GROUP BY c.ddmu_nace</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaPercVisitaMunicipioDS"
+               id="mapaPercVisitaMunicipioDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT CAST(c.ddmu_municipio AS varchar(30)) AS "municipio",
+       CASE WHEN (SELECT SUM(a1.iden_visita_meta) AS perc_visitado_inf
+    				FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    	INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        			INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        			INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        			AND e1.ddtc_ciclo = ${ciclo}
+                    				AND c1.ddmu_municipio = c.ddmu_municipio) = 0
+       THEN SUM(a.iden_visita_realizada)
+       ELSE ROUND(CAST((SELECT(SUM(a1.iden_visita_realizada)*100)/SUM(a1.iden_visita_meta) AS perc_visitado_inf
+					FROM dengue.dengue_f_entomologico a1 
+						INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+					    	INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+                        			INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                        			INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+					WHERE b1.ddtan_ano = ${ano}
+						AND d1.ddco_informado = 'T'
+                        			AND e1.ddtc_ciclo = ${ciclo}
+                    				AND c1.ddmu_municipio = c.ddmu_municipio) AS NUMERIC),2)
+       END AS perc_visitado
+FROM dengue.dengue_f_entomologico a 
+    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)
+WHERE b.ddtan_ano = ${ano}
+AND e.ddtc_ciclo = ${ciclo}
+GROUP BY c.ddmu_municipio</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartMicroregiaoDS"
+               id="BarChartMicroregiaoDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+      </Parameters>
+      <Query>SELECT tb1.ddmu_microregional AS "microregiao",
+       SUM(tb1.iip) AS "Indice de Infestacao Predial",
+       SUM(tb1.pendencia) AS "Pendencia",
+       SUM(tb1.perc_visitado) AS "% Visitado"
+FROM
+  (SELECT c.ddmu_microregional,
+         CASE WHEN (SELECT COUNT(a1.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a1
+                          INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id  = b1.ddtan_id)
+                          INNER JOIN dengue.dengue_d_municipios c1 on (a1.ddmu_id = c1.ddmu_id)
+                          INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+                          INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+                      WHERE b1.ddtan_ano = ${ano}
+                          AND c1.ddmu_microregional = c.ddmu_microregional
+                      	AND d1.ddco_informado = 'T'
+                      	AND e1.ddtc_ciclo = ${ciclo}) = 0
+         THEN SUM(a.iden_iip)
+         ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT count(a2.ddmu_id)
+                      			FROM dengue.dengue_f_entomologico a2 
+                          				INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+                          				INNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)
+                                        		INNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)
+				                     INNER JOIN dengue.dengue_d_tempo_ciclo e2 ON (a2.ddtc_id = e2.ddtc_id)
+                      			WHERE b2.ddtan_ano = ${ano}
+   	                      			AND c2.ddmu_microregional = c.ddmu_microregional
+							AND d2.ddco_informado = 'T'
+							AND e2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+         END AS iip,
+         
+         CASE WHEN (SELECT count(a1.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a1 
+                          	INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)
+ 				INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+				INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+                      WHERE b1.ddtan_ano = ${ano}
+				AND c1.ddmu_microregional = c.ddmu_microregional
+                      	AND d1.ddco_informado = 'T'
+                            AND e1.ddtc_ciclo = ${ciclo}) = 0
+         THEN SUM(a.iden_pendencia)
+         ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT count(a2.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a2 
+                          	INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)
+                          	INNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)
+				INNER JOIN dengue.dengue_d_tempo_ciclo e2 ON (a2.ddtc_id = e2.ddtc_id)
+                      WHERE b2.ddtan_ano = ${ano}
+                      		AND c2.ddmu_microregional = c.ddmu_microregional
+                            AND d2.ddco_informado = 'T'
+                            AND e2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+         END AS pendencia,
+         
+         CASE WHEN (SELECT count(a1.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a1 
+                          	INNER JOIN dengue.dengue_d_tempo_ano b1 on (a1.ddtan_id = b1.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_municipios c1 on (a1.ddmu_id = c1.ddmu_id)
+                          	INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)
+				INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)
+                      WHERE b1.ddtan_ano = ${ano}
+                      	AND c1.ddmu_microregional = c.ddmu_microregional
+                       	AND d1.ddco_informado = 'T'
+                            AND e1.ddtc_ciclo = ${ciclo}) = 0
+         THEN SUM(a.iden_perc_visitado)
+         ELSE ROUND(CAST(SUM(a.iden_perc_visitado)/(SELECT count(a2.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a2
+                          	INNER JOIN dengue.dengue_d_tempo_ano b2 on (a2.ddtan_id = b2.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_municipios c2 on (a2.ddmu_id = c2.ddmu_id)
+				INNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)
+				INNER JOIN dengue.dengue_d_tempo_ciclo e2 ON (a2.ddtc_id = e2.ddtc_id)
+                      WHERE b2.ddtan_ano = ${ano}
+	                     AND c2.ddmu_microregional = c.ddmu_microregional
+                       	AND d2.ddco_informado = 'T'
+                            AND e2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+         END AS perc_visitado
+  FROM dengue.dengue_f_entomologico a 
+      	INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+      	INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)
+	INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)
+	INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)
+  WHERE b.ddtan_ano = ${ano}
+  GROUP BY c.ddmu_microregional, d.ddco_informado, e.ddtc_ciclo
+  HAVING d.ddco_informado = 'T' 
+  		AND e.ddtc_ciclo = ${ciclo}) AS tb1
+
+GROUP BY tb1.ddmu_microregional
+ORDER BY tb1.ddmu_microregional</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartMicroregiaoMesDS"
+               id="BarChartMicroregiaoMesDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2008" name="ano" type="Integer"/>
+         <Parameter default="2" name="ciclo" type="Integer"/>
+         <Parameter default="CENTRAL" name="microregiao" type="String"/>
+      </Parameters>
+      <Query>SELECT CAST(tb1.ddtm_mes AS CHAR(2)) AS mes,
+       SUM(tb1.iip) AS "Indice de Infestacao Predial",
+       SUM(tb1.pendencia) AS "Pendencia",
+       SUM(tb1.perc_visitado) AS "% Visitado"
+FROM
+  (SELECT c.ddtm_mes,
+         CASE WHEN (SELECT COUNT(a1.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a1
+                              INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_tempo_mes c1 ON (a1.ddtm_id = c1.ddtm_id)
+                          	INNER JOIN dengue.dengue_d_municipios d1 on (a1.ddmu_id = d1.ddmu_id)
+                            INNER JOIN dengue.dengue_d_controles e1 ON (a1.ddco_id = e1.ddco_id)
+ 	                     INNER JOIN dengue.dengue_d_tempo_ciclo f1 ON (a1.ddtc_id = f1.ddtc_id)
+                      WHERE b1.ddtan_ano = ${ano}
+                      	AND c1.ddtm_mes = c.ddtm_mes
+				AND d1.ddmu_microregional = ${microregiao}
+                      	AND e1.ddco_informado = 'T'
+                            AND f1.ddtc_ciclo = ${ciclo}) = 0
+         THEN SUM(a.iden_iip)
+         ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a2.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a2
+                      	INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_tempo_mes c2 ON (a2.ddtm_id = c2.ddtm_id)
+                          	INNER JOIN dengue.dengue_d_municipios d2 ON (a2.ddmu_id = d2.ddmu_id)
+                            INNER JOIN dengue.dengue_d_controles e2 ON (a2.ddco_id = e2.ddco_id)
+ 	                     INNER JOIN dengue.dengue_d_tempo_ciclo f2 ON (a2.ddtc_id = f2.ddtc_id)
+                      WHERE b2.ddtan_ano = ${ano}
+                      	AND c2.ddtm_mes = c.ddtm_mes
+				AND d2.ddmu_microregional = ${microregiao}
+                      	AND e2.ddco_informado = 'T'
+                            AND f2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+         END AS iip,
+         
+         CASE WHEN (SELECT COUNT(a1.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a1 
+                      	INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_tempo_mes c1 ON (a1.ddtm_id = c1.ddtm_id)
+                          	INNER JOIN dengue.dengue_d_municipios d1 ON (a1.ddmu_id = d1.ddmu_id)
+                            INNER JOIN dengue.dengue_d_controles e1 ON (a1.ddco_id = e1.ddco_id)
+ 	                     INNER JOIN dengue.dengue_d_tempo_ciclo f1 ON (a1.ddtc_id = f1.ddtc_id)
+                      WHERE b1.ddtan_ano = ${ano}
+                      	AND c1.ddtm_mes = c.ddtm_mes
+				AND d1.ddmu_microregional = ${microregiao}
+                      	AND e1.ddco_informado = 'T'
+                            AND f1.ddtc_ciclo = ${ciclo}) = 0
+         THEN SUM(a.iden_pendencia)
+         ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT count(a2.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a2
+                      	INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_tempo_mes c2 ON (a2.ddtm_id = c2.ddtm_id)
+                          	INNER JOIN dengue.dengue_d_municipios d2 ON (a2.ddmu_id = d2.ddmu_id)
+                            INNER JOIN dengue.dengue_d_controles e2 ON (a2.ddco_id = e2.ddco_id)
+ 	                     INNER JOIN dengue.dengue_d_tempo_ciclo f2 ON (a2.ddtc_id = f2.ddtc_id)
+                      WHERE b2.ddtan_ano = ${ano}
+                      	AND c2.ddtm_mes = c.ddtm_mes
+				AND d2.ddmu_microregional = ${microregiao}
+                      	AND e2.ddco_informado = 'T'
+                            AND f2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+         END AS pendencia,
+         
+         CASE WHEN (SELECT count(a1.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a1
+                      	INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_tempo_mes c1 ON (a1.ddtm_id = c1.ddtm_id)
+                          	INNER JOIN dengue.dengue_d_municipios d1 ON (a1.ddmu_id = d1.ddmu_id)
+                            INNER JOIN dengue.dengue_d_controles e1 ON (a1.ddco_id = e1.ddco_id)
+ 	                     INNER JOIN dengue.dengue_d_tempo_ciclo f1 ON (a1.ddtc_id = f1.ddtc_id)
+                      WHERE b1.ddtan_ano = ${ano}
+                      	AND c1.ddtm_mes = c.ddtm_mes
+				AND d1.ddmu_microregional = ${microregiao}
+                      	AND e1.ddco_informado = 'T'
+                            AND f1.ddtc_ciclo = ${ciclo}) = 0
+         THEN SUM(a.iden_perc_visitado)
+         ELSE ROUND(CAST(SUM(a.iden_perc_visitado)/(SELECT COUNT(a2.ddmu_id)
+                      FROM dengue.dengue_f_entomologico a2
+                      	INNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)
+                          	INNER JOIN dengue.dengue_d_tempo_mes c2 ON (a2.ddtm_id = c2.ddtm_id)
+                          	INNER JOIN dengue.dengue_d_municipios d2 ON (a2.ddmu_id = d2.ddmu_id)
+                            INNER JOIN dengue.dengue_d_controles e2 ON (a2.ddco_id = e2.ddco_id)
+ 	                     INNER JOIN dengue.dengue_d_tempo_ciclo f2 ON (a2.ddtc_id = f2.ddtc_id)
+                      WHERE b2.ddtan_ano = ${ano}
+                      	AND c2.ddtm_mes = c.ddtm_mes
+				AND d2.ddmu_microregional = ${microregiao}
+                      	AND e2.ddco_informado = 'T'
+                            AND f2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)
+         END AS perc_visitado
+  FROM dengue.dengue_f_entomologico a 
+      	INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)
+      	INNER JOIN dengue.dengue_d_tempo_mes c ON (a.ddtm_id = c.ddtm_id)
+      	INNER JOIN dengue.dengue_d_municipios d on (a.ddmu_id = d.ddmu_id)
+	INNER JOIN dengue.dengue_d_controles e ON (a.ddco_id = e.ddco_id)
+ 	INNER JOIN dengue.dengue_d_tempo_ciclo f ON (a.ddtc_id = f.ddtc_id)
+  WHERE b.ddtan_ano = ${ano}
+  	 AND d.ddmu_microregional = ${microregiao}
+        AND e.ddco_informado  = 'T'
+        AND f.ddtc_ciclo = ${ciclo}
+  GROUP BY c.ddtm_mes, f.ddtc_ciclo) as tb1
+
+GROUP BY tb1.ddtm_mes
+ORDER BY tb1.ddtm_mes</Query>
+   </DataAccess>
+</CDADescriptor>

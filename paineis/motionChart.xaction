@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-sequence> 
+  <title>google visualization</title>
+  <version>1</version>
+  <logging-level>ERROR</logging-level>
+  <documentation> 
+    <author/>  
+    <description>Empty blank action sequence document</description>  
+    <help/>  
+    <result-type>none</result-type>  
+    <icon/> 
+  </documentation>
+
+  <inputs> 
+    <ANO type="string"> 
+      <sources> 
+        <request>ANO</request> 
+      </sources>  
+      <default-value><![CDATA[2010]]></default-value> 
+    </ANO>  
+    <DADOS type="string"> 
+      <sources> 
+        <request>DADOS</request> 
+      </sources>  
+      <default-value><![CDATA[CENTRAL,CENTRO SUL]]></default-value> 
+    </DADOS>  
+    <OPCAO type="string"> 
+      <sources> 
+        <request>OPCAO</request> 
+      </sources>  
+      <default-value><![CDATA[2]]></default-value> 
+    </OPCAO>  
+    <ESTILO type="string"> 
+      <sources> 
+        <request>ESTILO</request> 
+      </sources>  
+      <default-value><![CDATA[Acumulado]]></default-value> 
+    </ESTILO> 
+  </inputs>
+
+  <outputs> 
+    <out type="string"/> 
+  </outputs>
+
+  <resources/>
+  
+  <actions> 
+    <actions> 
+      <condition><![CDATA[OPCAO == "1"]]></condition>  
+      <actions> 
+        <condition><![CDATA[ESTILO == "Absoluto"]]></condition>  
+        <action-definition> 
+          <component-name>SQLLookupRule</component-name>
+          <action-type>Relational</action-type>
+          <action-inputs> 
+            <DADOS type="string"/>  
+            <ANO type="string"/> 
+          </action-inputs>
+          <action-outputs> 
+            <query-result type="result-set" mapping="query_result"/> 
+          </action-outputs>
+          <component-definition> 
+            <jndi><![CDATA[bisaudego]]></jndi>  
+            <query><![CDATA[select replace(c.ddmu_municipio,'''','') as ddmu_municipio, b.ddte_ano, b.ddte_semana, a.incidencia, a.qt_caso, a.qt_obito
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)
+                             inner join dengue.dengue_d_municipios c on (a.ddmu_id = c.ddmu_id)
+where b.ddte_ano = {ANO} and
+      c.ddmu_id in ({DADOS})
+order by b.ddte_ano, b.ddte_semana, c.ddmu_municipio]]></query>  
+            <live><![CDATA[true]]></live> 
+          </component-definition> 
+        </action-definition>
+ 
+      </actions>
+  
+      <actions> 
+        <condition><![CDATA[ESTILO == "Acumulado"]]></condition>  
+        <action-definition> 
+          <component-name>SQLLookupRule</component-name>
+          <action-type>Relational</action-type>
+          <action-inputs> 
+            <ANO type="string"/>  
+            <DADOS type="string"/> 
+          </action-inputs>
+          <action-outputs> 
+            <query-result type="result-set" mapping="query_result"/> 
+          </action-outputs>
+          <component-definition> 
+            <jndi><![CDATA[bisaudego]]></jndi>  
+            <live><![CDATA[false]]></live>  
+            <query><![CDATA[select replace(c.ddmu_municipio,'''','') as ddmu_municipio, b.ddte_ano, b.ddte_semana, a.incidencia_acum, a.qt_caso_acum, a.qt_obito_acum
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)
+                             inner join dengue.dengue_d_municipios c on (a.ddmu_id = c.ddmu_id)
+where b.ddte_ano = {ANO} and
+      c.ddmu_id in ({DADOS})
+order by b.ddte_ano, b.ddte_semana, c.ddmu_municipio]]></query> 
+          </component-definition> 
+        </action-definition>
+ 
+      </actions>
+ 
+    </actions>
+  
+    <actions> 
+      <condition><![CDATA[OPCAO == "2"]]></condition>  
+      <action-definition> 
+        <component-name>JavascriptRule</component-name>
+        <action-type>JavaScript</action-type>
+        <action-inputs> 
+          <DADOS type="string"/>  
+          <ANO type="string"/> 
+        </action-inputs>
+        <action-outputs> 
+          <ANO type="integer"/>  
+          <newDados type="string"/> 
+        </action-outputs>
+        <component-definition> 
+          <script><![CDATA[newDados = "'" + DADOS.split(",").join("','") + "'";
+
+//out.println("1> --------------------" + DADOS);]]></script> 
+        </component-definition> 
+      </action-definition>
+  
+      <actions> 
+        <condition><![CDATA[ESTILO == "Absoluto"]]></condition>  
+        <action-definition> 
+          <component-name>SQLLookupRule</component-name>
+          <action-type>Relational</action-type>
+          <action-inputs> 
+            <ANO type="string"/>  
+            <newDados type="string"/> 
+          </action-inputs>
+          <action-outputs> 
+            <query-result type="result-set" mapping="query_result"/> 
+          </action-outputs>
+          <component-definition> 
+            <jndi><![CDATA[bisaudego]]></jndi>  
+            <live><![CDATA[true]]></live>  
+            <query><![CDATA[select c.ddmu_microregional, b.ddte_ano, b.ddte_semana, sum(a.incidencia), sum(a.qt_caso), sum(a.qt_obito)
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)
+                             inner join dengue.dengue_d_municipios c on (a.ddmu_id = c.ddmu_id)
+where b.ddte_ano = {ANO} and
+      c.ddmu_microregional in ({newDados})
+group by b.ddte_ano, b.ddte_semana, c.ddmu_microregional
+order by b.ddte_ano, b.ddte_semana, c.ddmu_microregional]]></query> 
+          </component-definition> 
+        </action-definition>
+ 
+      </actions>
+  
+      <actions> 
+        <condition><![CDATA[ESTILO == "Acumulado"]]></condition>  
+        <action-definition> 
+          <component-name>SQLLookupRule</component-name>
+          <action-type>Relational</action-type>
+          <action-inputs> 
+            <ANO type="string"/>  
+            <newDados type="string"/> 
+          </action-inputs>
+          <action-outputs> 
+            <query-result type="result-set" mapping="query_result"/> 
+          </action-outputs>
+          <component-definition> 
+            <query><![CDATA[select c.ddmu_microregional, b.ddte_ano, b.ddte_semana, sum(a.incidencia_acum), sum(a.qt_caso_acum), sum(a.qt_obito_acum)
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)
+                             inner join dengue.dengue_d_municipios c on (a.ddmu_id = c.ddmu_id)
+where b.ddte_ano = {ANO} and
+      c.ddmu_microregional in ({newDados})
+group by b.ddte_ano, b.ddte_semana, c.ddmu_microregional
+order by b.ddte_ano, b.ddte_semana, c.ddmu_microregional]]></query>  
+            <live><![CDATA[false]]></live>  
+            <jndi><![CDATA[bisaudego]]></jndi> 
+          </component-definition> 
+        </action-definition>
+ 
+      </actions>
+ 
+    </actions>
+  
+    <actions> 
+      <condition><![CDATA[OPCAO == "3"]]></condition>  
+      <actions> 
+        <condition><![CDATA[ESTILO == "Absoluto"]]></condition>  
+        <action-definition> 
+          <component-name>SQLLookupRule</component-name>
+          <action-type>Relational</action-type>
+          <action-inputs> 
+            <ANO type="string"/> 
+          </action-inputs>
+          <action-outputs> 
+            <query-result type="result-set" mapping="query_result"/> 
+          </action-outputs>
+          <component-definition> 
+            <jndi><![CDATA[bisaudego]]></jndi>  
+            <live><![CDATA[true]]></live>  
+            <query><![CDATA[select 'GOIAS' as estado, b.ddte_ano, b.ddte_semana, sum(a.incidencia) as incidencia, sum(a.qt_caso) as qtd_caso, sum(a.qt_obito) as qt_obito
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)
+where b.ddte_ano = {ANO}
+group by b.ddte_ano, b.ddte_semana
+order by b.ddte_ano, b.ddte_semana]]></query> 
+          </component-definition> 
+        </action-definition>
+ 
+      </actions>
+  
+      <actions> 
+        <condition><![CDATA[ESTILO == "Acumulado"]]></condition>  
+        <action-definition> 
+          <component-name>SQLLookupRule</component-name>
+          <action-type>Relational</action-type>
+          <action-inputs> 
+            <ANO type="string"/> 
+          </action-inputs>
+          <action-outputs> 
+            <query-result type="result-set" mapping="query_result"/> 
+          </action-outputs>
+          <component-definition> 
+            <query><![CDATA[select 'GOIAS' as estado, b.ddte_ano, b.ddte_semana, sum(a.incidencia_acum) as incidencia, sum(a.qt_caso_acum) as qtd_caso_acum, sum(a.qt_obito_acum) as qt_obito_acum
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)
+where b.ddte_ano = {ANO}
+group by b.ddte_ano, b.ddte_semana
+order by b.ddte_ano, b.ddte_semana]]></query>  
+            <live><![CDATA[true]]></live>  
+            <jndi><![CDATA[bisaudego]]></jndi> 
+          </component-definition> 
+        </action-definition>
+ 
+      </actions>
+ 
+    </actions>
+  
+    <action-definition> 
+      <component-name>JavascriptRule</component-name>
+      <action-type>JavaScript</action-type>
+      <action-inputs> 
+        <query_result type="result-set"/> 
+      </action-inputs>
+      <action-outputs> 
+        <motionResult type="string"/> 
+      </action-outputs>
+      <component-definition> 
+        <script><![CDATA[if (query_result != null) {
+  
+  var motionResult = "";
+
+  var rowCount = query_result.getRowCount() ;
+
+  for (j=0; j<rowCount; j++){
+
+
+    var municipio = query_result.getValueAt(j, 0) ;
+    var ano = query_result.getValueAt(j, 1) ; 
+    var mes = query_result.getValueAt(j, 2) ;
+    var incidencia = query_result.getValueAt(j, 3) ;
+    var casos = query_result.getValueAt(j, 4) ;
+    var obitos = query_result.getValueAt(j, 5) ;
+
+    var strMes = "";
+    var semana = "";
+
+    if ( mes == 1 ) { semana = ano + "W01"; }
+    else if ( mes == 2 ) { semana = ano + "W02"; }
+    else if ( mes == 3 ) { semana = ano + "W03"; }
+    else if ( mes == 4 ) { semana = ano + "W04"; }
+    else if ( mes == 5 ) { semana = ano + "W05"; }
+    else if ( mes == 6 ) { semana = ano + "W06"; }
+    else if ( mes == 7 ) { semana = ano + "W07"; }
+    else if ( mes == 8 ) { semana = ano + "W08"; }
+    else if ( mes == 9 ) { semana = ano + "W09"; }
+    else if ( mes >= 10 ) { semana = ano + "W" + mes; }
+
+    motionResult += "['" + municipio + "','" + semana + "'," + incidencia + "," + casos + "," + obitos + "]";
+
+    if ( j < (rowCount - 1)) {
+      motionResult += ",";
+    }
+  }
+}]]></script> 
+      </component-definition> 
+    </action-definition>
+  
+    <action-definition> 
+      <component-name>TemplateComponent</component-name>
+      <action-type>Message Template</action-type>
+      <action-inputs> 
+        <motionResult type="string"/> 
+      </action-inputs>
+      <action-resources/>
+      <action-outputs> 
+        <output-message type="string" mapping="out"/> 
+      </action-outputs>
+      <component-definition> 
+        <template><![CDATA[<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {'packages':['motionchart']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Municipio');
+        data.addColumn('string', 'Semana');
+        data.addColumn('number', 'Incidencia');
+        data.addColumn('number', 'Casos');
+        data.addColumn('number', 'Obitos');
+        data.addRows([
+          {motionResult}
+        ]);
+
+       var options = {};
+       options['state'] =  {
+                                        "yZoomedDataMax":1300,
+                                        "yZoomedIn":false,
+                                        "iconType":"VBAR",
+                                        "playDuration":18888,
+                                        "orderedByX":true,
+                                        "yZoomedDataMin":0,
+                                        "xAxisOption":"_ALPHABETICAL",
+                                        "orderedByY":false,
+                                        "nonSelectedAlpha":0.4,
+                                        "yLambda":1,
+                                        "xZoomedDataMin":0,
+                                        "xZoomedIn":false,
+                                        "duration":{"multiplier":1,
+                                        "timeUnit":"W"},
+                                        "uniColorForNonSelected":false,
+                                        "colorOption":"_UNIQUE_COLOR",
+                                        "showTrails":false,
+                                        "xZoomedDataMax":3,
+                                        "sizeOption":"_UNISIZE",
+                                        "yAxisOption":"2",
+                                        "xLambda":1,
+                                        "dimensions":{
+                                                                "iconDimensions":["dim0"]
+                                                             },
+                                        "iconKeySettings":[]
+                                     };
+        options['width'] = 850;
+        options['height'] = 400;
+
+        var chart = new google.visualization.MotionChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div" style="width:100%;height:100%"></div>
+  </body>
+</html>]]></template> 
+      </component-definition> 
+    </action-definition>
+ 
+  </actions> 
+</action-sequence>

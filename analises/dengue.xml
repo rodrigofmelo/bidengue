@@ -1,0 +1,41 @@
+<Schema name="DENGUE">
+
+  <Cube name="Dengue" cache="true" enabled="true">
+    <Table name="dengue_f_casos" schema="dengue">
+    </Table>
+    <Dimension type="StandardDimension" foreignKey="ddmu_id" highCardinality="false" name="Municipio">
+      <Hierarchy name="Municipios" hasAll="true" allMemberName="Todos Municipios" primaryKey="ddmu_id">
+        <Table name="dengue_d_municipios" schema="dengue">
+        </Table>
+        <Level name="Macroregiao" column="ddmu_macroregional" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Microregiao" column="ddmu_microregional" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Municipio" column="ddmu_municipio" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="TimeDimension" foreignKey="ddte_id" highCardinality="false" name="Data">
+      <Hierarchy name="Datas" hasAll="true" allMemberName="Todas Datas" primaryKey="ddte_id">
+        <Table name="dengue_d_tempo" schema="dengue">
+        </Table>
+        <Level name="Ano" table="dengue_d_tempo" column="ddte_ano" type="Numeric" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+        </Level>
+        <Level name="Semana" table="dengue_d_tempo" column="ddte_semana" type="Numeric" uniqueMembers="false" levelType="TimeWeeks" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" foreignKey="ddmu_id" highCardinality="false" name="Populacao">
+      <Hierarchy name="Populacao" hasAll="true" allMemberName="Pop Munic" primaryKey="ddmu_id">
+        <Table name="dengue_d_municipios" schema="dengue">
+        </Table>
+        <Level name="Populacao" column="ddmu_populacao" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Casos" column="qt_caso" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Incidencia" column="incidencia" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

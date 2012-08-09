@@ -1,0 +1,5566 @@
+{
+ "layout": {
+  "title": "Filter Template",
+  "rows": [
+   {
+    "id": "2156fea1-952c-6327-f326-8a221d9d6d17",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "flashMaps.js",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/saude/js/flashMaps.js",
+      "type": "ResourceFile"
+     }
+    ]
+   },
+   {
+    "id": "cd8ca508-915f-222f-ddf8-7a0eb4218c9f",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "swfobject.js",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/saude/js/swfobject.js",
+      "type": "ResourceFile"
+     }
+    ]
+   },
+   {
+    "id": "5f1a2441-7317-ded9-5eb5-cc568f2838fe",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "styles.css",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/saude/css/styles-saude.css",
+      "type": "ResourceFile"
+     }
+    ]
+   },
+   {
+    "id": "e12f9bf3-27f1-beb1-0a68-a5b0facd091b",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Cabecalho"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "cabecalho"
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": ""
+     }
+    ]
+   },
+   {
+    "id": "5dc54aa4-6a22-269a-d641-ac5fd3a61298",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "e12f9bf3-27f1-beb1-0a68-a5b0facd091b",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": ""
+     },
+     {
+      "name": "columnSpan",
+      "type": "Integer",
+      "value": "24"
+     },
+     {
+      "name": "columnPrepend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnAppend",
+      "type": "Integer",
+      "value": ""
+     },
+     {
+      "name": "columnPrependTop",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "columnAppendBottom",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "columnBorder",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "columnBigBorder",
+      "type": "Boolean",
+      "value": false
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": ""
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "60"
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": ""
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": "center"
+     }
+    ]
+   },
+   {
+    "id": "53e4ccdd-bd66-1ee1-8b5a-5a8771703095",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "5dc54aa4-6a22-269a-d641-ac5fd3a61298",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "titleHeader"
+     },
+     {
+      "name": "html",
+      "type": "Html",
+      "value": "<h1>Painel de Acompanhamento Entomológico da Dengue</h1> \n<p>\n<hr/> "
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "title",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "5c1df677-40dc-3102-43b0-1fa9149933f7",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Cabecalho2",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "cabecalho2",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "ec74a114-32d2-2f94-80a6-fcf0b8f9e034",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "5c1df677-40dc-3102-43b0-1fa9149933f7",
+    "properties": [
+     {
+      "name": "name",
+      "value": "descTitle",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "18",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "50",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "titulo1",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "7d740615-0e68-e40a-06bd-cd23ecd930e4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "space",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "50",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "94c86b84-836b-832d-e4e1-da7270525d31",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "5e249e52-d84c-5ae9-a4a4-8463182205d4",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "94c86b84-836b-832d-e4e1-da7270525d31",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartHistoricoObject",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "20",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "2963800c-866e-fba7-aaa0-042e0438952c",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "4380c4e0-9366-f44e-2279-5170b2b01c3f",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "2963800c-866e-fba7-aaa0-042e0438952c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartCicloAnoObject",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "12",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "fd649778-3d33-2e1c-83bb-3f7625f31553",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "07e25670-7f15-00dd-61f0-ff50d747c0ff",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "fd649778-3d33-2e1c-83bb-3f7625f31553",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "3",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "3d824412-4071-219e-05c8-914773fcd94d",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "07e25670-7f15-00dd-61f0-ff50d747c0ff",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaIIPNaceObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "8b3392f6-2a18-027e-a33b-95954a2ebf08",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "07e25670-7f15-00dd-61f0-ff50d747c0ff",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPNaceObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "49b91120-77dd-9289-85bd-a2f6ec0f31fe",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "fd649778-3d33-2e1c-83bb-3f7625f31553",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "2ca318f4-44ed-ff27-c027-9829aa46e683",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "49b91120-77dd-9289-85bd-a2f6ec0f31fe",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaIIPMunicipioObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "04c7c37c-e12f-438e-a05f-44c4fdc31227",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "49b91120-77dd-9289-85bd-a2f6ec0f31fe",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPMunicipioObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "c359376b-8568-3c67-c633-afb1641eceac",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "21af88bf-e986-538e-749d-867eb129efeb",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "c359376b-8568-3c67-c633-afb1641eceac",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "3",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "24bb829f-fcbe-9bd3-04e3-f91c15f7f260",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "21af88bf-e986-538e-749d-867eb129efeb",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPendNaceObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "9fcc5939-fb2d-4e32-0367-0f659240d3ba",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "21af88bf-e986-538e-749d-867eb129efeb",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendNaceObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "45da1db2-ac51-643c-a581-b3fd9b981f46",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "c359376b-8568-3c67-c633-afb1641eceac",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "c761a922-e60b-4d6c-0a76-6cd969bc0372",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "45da1db2-ac51-643c-a581-b3fd9b981f46",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPendMunicipioObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "44120979-c31b-a68a-fdfb-bdd2eca8dfd6",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "45da1db2-ac51-643c-a581-b3fd9b981f46",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendMunicipioObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "dd4ef4cf-d507-a48a-a00e-42c341c8fa11",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "743ccdf9-70d4-00ad-b5a5-569d88d9a182",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "dd4ef4cf-d507-a48a-a00e-42c341c8fa11",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "3",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "cfc95f6d-29ba-bdfc-b74c-8081ba3f36f6",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "743ccdf9-70d4-00ad-b5a5-569d88d9a182",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPercVisitaNaceObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "432ae448-27e9-18e3-afe9-8b340842a628",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "743ccdf9-70d4-00ad-b5a5-569d88d9a182",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaNaceObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "1fb28edc-9ac7-82a6-ff13-33b921c79064",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "dd4ef4cf-d507-a48a-a00e-42c341c8fa11",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "10",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "dd6bb4ac-3ecc-5613-92be-035e0e5184f7",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "1fb28edc-9ac7-82a6-ff13-33b921c79064",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPercVisitaMunicipioObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "3b0e090f-fbdd-4489-a8cd-803b9c105dd4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "1fb28edc-9ac7-82a6-ff13-33b921c79064",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaMunicipioObject",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "ef493149-3633-5e87-51e3-6591c8cc9a57",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "16e9dbab-8239-486d-7ecc-dea8a43e0829",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "ef493149-3633-5e87-51e3-6591c8cc9a57",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartMicroregiaoObject",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "20",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "e3e8626e-ab2d-b5af-70f5-21747da5ed2c",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "f0467cac-8fad-2d2b-9b29-3549f216aae0",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "e3e8626e-ab2d-b5af-70f5-21747da5ed2c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartMicroregiaoMesObject",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "20",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "cc2c52ab-4550-2de9-2bba-ad7e995c45ce",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "60c5fbce-c6a5-1ea8-84a8-e2564bf220e8",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "cc2c52ab-4550-2de9-2bba-ad7e995c45ce",
+    "properties": [
+     {
+      "name": "name",
+      "value": "MunicipiosEntomologicoReportObject",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "12",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "776a54f1-924e-d7c7-4a20-3a78cb00a4a4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "corpo",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "b363abc9-bb61-7cae-6907-f8a602808fee",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "776a54f1-924e-d7c7-4a20-3a78cb00a4a4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "FonteObject",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "20",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "titulo1",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "64b07960-f21e-b93e-4911-8c2c025d0d3b",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "type": "Id",
+      "value": "Rodape"
+     },
+     {
+      "name": "height",
+      "type": "Integer",
+      "value": "50"
+     },
+     {
+      "name": "backgroundColor",
+      "type": "Color",
+      "value": ""
+     },
+     {
+      "name": "roundCorners",
+      "type": "RoundCorners",
+      "value": "cdfdd-round"
+     },
+     {
+      "name": "cssClass",
+      "type": "String",
+      "value": "rodape"
+     },
+     {
+      "name": "textAlign",
+      "type": "TextAlign",
+      "value": "right"
+     }
+    ]
+   },
+   {
+    "id": "f84aa296-6b4e-260a-5f8d-3dbca90e284d",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "64b07960-f21e-b93e-4911-8c2c025d0d3b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "cdfdd-round",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "height",
+      "value": "50",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "textAlign",
+      "value": "center",
+      "type": "TextAlign"
+     }
+    ]
+   },
+   {
+    "id": "f5ccd1cd-19ed-f22a-55ec-65563b3dd8c5",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "f84aa296-6b4e-260a-5f8d-3dbca90e284d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "image",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<hr />\r\n<a style=\"position:relative;top:12;\" border=\"0\" title=\"Secretaria de Saúde do Estado de Goiás\" href=\"http://www.saude.go.gov.br\">\r\n<img style=\"width:300px;height:70px\" src=\"/saude/img/LOGO.png\"/>\r\n</a> ",
+      "type": "Html"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "6650bebf-4d26-f64c-1bb7-687f8701b24b",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "descTitleTextComponent",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": " function(){\n     \n    if(ano == 0) {\n      title= \"Selecione no gráfico o ano desejado para obter informações detalhadas.\";\n\n    }\n    else if (ano != 0 && ciclo == 0 && microregiao == \"\" && mes == \"\") {\n        title= \"Ano: \" + ano;\n    }\n    else if (ano != 0 && ciclo != \"\" && microregiao == \"\" && mes == \"\") {\n        title= \"Ano: \" + ano + \"<br>Bimestre: \" + ciclo;\n    }\n    else if (ano != 0 && ciclo != \"\" && microregiao != \"\" && mes == \"\") {\n        title= \"Ano: \" + ano + \"<br>Bimestre: \" + ciclo + \"<br>Regional de Saúde \" + microregiao;\n    }\n    else if (ano != 0 && ciclo != \"\" && microregiao != \"\" && mes != \"\") {\n      var str_mes = \"\";\n      mes = parseInt(mes);\n      switch (mes) {\n    \tcase 1:\n\t\t\tstr_mes = \"Janeiro\";\n\t\t\tbreak;\n        case 2:\n    \t\tstr_mes = \"Fevereiro\";\n\t\t\tbreak;\n\t\tcase 3:\n\t\t\tstr_mes = \"Marco\";\n\t\t\tbreak;\n\t\tcase 4:\n\t\t\tstr_mes = \"Abril\";\n\t\t\tbreak;\n\t\tcase 5:\n\t\t\tstr_mes = \"Maio\";\n\t\t\tbreak;\n\t\tcase 6:\n\t\t\tstr_mes = \"Junho\";\n\t\t\tbreak;\n\t\tcase 7:\n\t\t\tstr_mes = \"Julho\";\n\t\t\tbreak;\n\t\tcase 8:\n\t\t\tstr_mes = \"Agosto\";\n\t\t\tbreak;\n\t\tcase 9:\n\t\t\tstr_mes = \"Setembro\";\n\t\t\tbreak;\n\t\tcase 10:\n\t\t\tstr_mes = \"Outubro\";\n\t\t\tbreak;\n\t\tcase 11:\n\t\t\tstr_mes = \"Novembro\";\n\t\t\tbreak;\n\t\tcase 12:\n\t\t\tstr_mes = \"Dezembro\";\n\t\t\tbreak;    \n        default:\n    \t\tstr_mes = \"Mes desconhecido \" + mes;\n\t  }    \n\n        title= \"Ano: \" + ano + \"<br>Bimestre: \" + ciclo + \"<br>Regional de Saúde \" + microregiao + \"<br>Mês: \" + str_mes;\n    }\n    /*\n    else if (ano != 0 && microregiao == \"\") {\n        title= \"Ano: \" + ano;\n    }\n    else {\n      title= \"Ano: \" + ano + \"<br>Regional de Saúde \" + microregiao;\n    }*/\n    \n     \n    return title;\n    \n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "descTitle",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo','microregiao','mes']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "d47cb8ec-2ff7-4357-5318-518151e8e432",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaIIPNace",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\n    \n    // Adiciona uma nova class usando javascript padrao\n    /*var titulo = document.getElementById('titleMapaCoberturaRegionalObject');\n    titulo.className += ' tituloBox';*/\n    \n    // Adiciona uma nova class usando jquery\n    $(\"#titleMapaIIPNaceObject\").addClass(\"tituloBox\");\n\n    title= \"Mapa de Índice de Infestação Predial por NACE  /\" + ano; \n    return title;\n    \n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "titleMapaIIPNaceObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "3a993d0b-0c06-efca-5722-9013d10547a9",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPNace",
+      "type": "Id"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "mapaIIPNaceDS"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "listeners",
+      "value": "['ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "htmlObject",
+      "value": "mapaIIPNaceObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    \n    if(ano == \"\" && ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function () {\n    \n    if (document.getElementById(this.htmlObject).innerHTML.split(' ').join('').length == 1) {\n        // Customizar parametros se necessario: mapa, altura e largura.\n                                // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        criarMapa(this.htmlObject, 'mapaIIPNaceResult', '/saude/flash/goias-nace.swf', '300', '300');\n\t} else {\n                   // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n    \tcustomizaMapa('mapaIIPNaceResult');\t\n\t}\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\n        // Customizar parametros se necessario: desc, limit1, text1, color1, limit2, text2, color2, limit3, text3, color3, limit4, text4, color4, text5, color5\n        //var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Baixo Risco', '0x00FF00', 1, 'Medio Risco', '0xFFFF00', 2, 'Alto Risco', '0xFF0000', '', '', '', '', '');\n\t    var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Silencioso', '0xCCCCCC', 1, 'Baixo Risco', '0x00FF00', 2, 'Medio Risco', '0xFFFF00', '', 'Alto Risco', '0xFF0000', '', '');\n     // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n\t  \tmapaIIPNaceResult = DATAROW;\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "9ffe7f79-e07c-123d-6044-568f1a80a8cf",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaIIPMunicipio",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\r\n    \r\n    // Adiciona uma nova class usando javascript padrao\r\n    /*var titulo = document.getElementById('titleMapaCoberturaRegionalObject');\r\n    titulo.className += ' tituloBox';*/\r\n    \r\n    // Adiciona uma nova class usando jquery\r\n    $(\"#titleMapaIIPMunicipioObject\").addClass(\"tituloBox\");\r\n\r\n    title= \"Mapa de Indice de Infestacao Predial por Municipio   /\" + ano; \r\n    return title;\r\n    \r\n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "titleMapaIIPMunicipioObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\r\n    if(ciclo == \"\"){\r\n        return false;   \r\n    }\r\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "9c7a24e6-2c7c-376e-35df-69fbac26c159",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPMunicipio",
+      "type": "Id"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "mapaIIPMunicipioDS"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "listeners",
+      "value": "['ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "htmlObject",
+      "value": "mapaIIPMunicipioObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\r\n    \r\n    if(ano == \"\" && ciclo == \"\"){\r\n        return false;   \r\n    }\r\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function () {\r\n    \r\n    if (document.getElementById(this.htmlObject).innerHTML.split(' ').join('').length == 1) {\r\n        // Customizar parametros se necessario: mapa, altura e largura.\r\n                                // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \r\n        criarMapa(this.htmlObject, 'mapaIIPMunicipioResult', '/saude/flash/goias-municipios.swf', '300', '300');\r\n    } else {\r\n                   // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \r\n    \tcustomizaMapa('mapaIIPMunicipioResult');\t\r\n\t}\r\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\r\n        \r\n        // Customizar parametros se necessario: desc, limit1, text1, color1, limit2, text2, color2, limit3, text3, color3, limit4, text4, color4, text5, color5\r\n        var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Silencioso', '0xCCCCCC', 1, 'Baixo Risco', '0x00FF00', 2, 'Medio Risco', '0xFFFF00', '', 'Alto Risco', '0xFF0000', '', '');\r\n      \r\n     // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \r\n\t  \tmapaIIPMunicipioResult = DATAROW;\r\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "ce0f1929-3c52-8b84-0402-37473bc863ca",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPendNace",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\n    \n    // Adiciona uma nova class usando javascript padrao\n    /*var titulo = document.getElementById('titleMapaCoberturaRegionalObject');\n    titulo.className += ' tituloBox';*/\n    \n    // Adiciona uma nova class usando jquery\n    $(\"#titleMapaPendNaceObject\").addClass(\"tituloBox\");\n\n    title= \"Mapa de Pendência por NACE  /\" + ano; \n    return title;\n    \n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "titleMapaPendNaceObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "db537f88-8cf1-f15a-b428-bc2d09a1d08c",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendNace",
+      "type": "Id"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "mapaPendNaceDS"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "listeners",
+      "value": "['ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "htmlObject",
+      "value": "mapaPendNaceObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    \n    if(ano == \"\" && ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function () {\n    \n    if (document.getElementById(this.htmlObject).innerHTML.split(' ').join('').length == 1) {\n        // Customizar parametros se necessario: mapa, altura e largura.\n                                // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        criarMapa(this.htmlObject, 'mapaPendNaceResult', '/saude/flash/goias-nace.swf', '300', '300');\n    } else {\n                   // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n    \tcustomizaMapa('mapaPendNaceResult');\t\n\t}\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\n        // Customizar parametros se necessario: desc, limit1, text1, color1, limit2, text2, color2, limit3, text3, color3, limit4, text4, color4, text5, color5\n        //var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Baixo Risco', '0x00FF00', 1, 'Medio Risco', '0xFFFF00', 2, 'Alto Risco', '0xFF0000', '', '', '', '', '');\n        var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Silencioso', '0xCCCCCC', 10, 'Baixo Risco', '0x00FF00', '', 'Alto Risco', '0xFF0000', '', '', '', '', '');\n     // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n\t  \tmapaPendNaceResult = DATAROW;\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "f9d6b3e5-5f0b-f7b6-28be-8db54d924712",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPendMunicipio",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\n    \n    // Adiciona uma nova class usando javascript padrao\n    /*var titulo = document.getElementById('titleMapaCoberturaRegionalObject');\n    titulo.className += ' tituloBox';*/\n    \n    // Adiciona uma nova class usando jquery\n    $(\"#titleMapaPendMunicipioObject\").addClass(\"tituloBox\");\n\n    title= \"Mapa de Pendência por Município  /\" + ano; \n    return title;\n    \n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "titleMapaPendMunicipioObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "cef303c8-a6ab-0fb8-a7e3-8449a26bc18e",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendMunicipio",
+      "type": "Id"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "mapaPendMunicipioDS"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "listeners",
+      "value": "['ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "htmlObject",
+      "value": "mapaPendMunicipioObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    \n    if(ano == \"\" && ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function () {\n    \n    if (document.getElementById(this.htmlObject).innerHTML.split(' ').join('').length == 1) {\n        // Customizar parametros se necessario: mapa, altura e largura.\n                                // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        criarMapa(this.htmlObject, 'mapaPendMunicipioResult', '/saude/flash/goias-municipios.swf', '300', '300');\n    } else {\n                   // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        customizaMapa('mapaPendMunicipioResult');\t\n\t}\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\n        // Customizar parametros se necessario: desc, limit1, text1, color1, limit2, text2, color2, limit3, text3, color3, limit4, text4, color4, text5, color5\n        //var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Baixo Risco', '0x00FF00', 1, 'Medio Risco', '0xFFFF00', 2, 'Alto Risco', '0xFF0000', '', '', '', '', '');\n        var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Silencioso', '0xCCCCCC', 10, 'Baixo Risco', '0x00FF00', '', 'Alto Risco', '0xFF0000', '', '', '', '', '');\n        // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n      \tmapaPendMunicipioResult = DATAROW;\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "d6e05c85-fffb-4a29-28e6-cdd24630fa52",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPercVisitaNace",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\n    \n    // Adiciona uma nova class usando javascript padrao\n    /*var titulo = document.getElementById('titleMapaCoberturaRegionalObject');\n    titulo.className += ' tituloBox';*/\n    \n    // Adiciona uma nova class usando jquery\n    $(\"#titleMapaPercVisitaNaceObject\").addClass(\"tituloBox\");\n\n    title= \"Mapa de Percentual Visitado por NACE  /\" + ano; \n    return title;\n    \n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "titleMapaPercVisitaNaceObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "25c9bc58-5db9-9e9d-4aad-3c124b442814",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaNace",
+      "type": "Id"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "mapaPercVisitaNaceDS"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "listeners",
+      "value": "['ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "htmlObject",
+      "value": "mapaPercVisitaNaceObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    \n    if(ano == \"\" && ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function () {\n    \n    if (document.getElementById(this.htmlObject).innerHTML.split(' ').join('').length == 1) {\n        // Customizar parametros se necessario: mapa, altura e largura.\n                                // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        criarMapa(this.htmlObject, 'mapaPercVisitaNaceResult', '/saude/flash/goias-nace.swf', '300', '300');\n    } else {\n                   // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        customizaMapa('mapaPercVisitaNaceResult');\t\n\t}\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\n        // Customizar parametros se necessario: desc, limit1, text1, color1, limit2, text2, color2, limit3, text3, color3, limit4, text4, color4, text5, color5\n        //var DATAROW = customMap(data, this.htmlObject, \"\", 0, 'Baixo Risco', '0x00FF00', 1, 'Medio Risco', '0xFFFF00', 2, 'Alto Risco', '0xFF0000', '', '', '', '', '');\n        var DATAROW = customMap(data, this.htmlObject, \"\", 80, 'Aceitável', '0xFF0000', '', 'Baixo', '0x00FF00', '', '', '', '', '', '', '', '');\n       // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n      \tmapaPercVisitaNaceResult = DATAROW;\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "40e89d96-f09e-828a-d0df-40170d587b03",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "titleMapaPercVisitaMunicipio",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\n    \n    // Adiciona uma nova class usando javascript padrao\n    /*var titulo = document.getElementById('titleMapaCoberturaRegionalObject');\n    titulo.className += ' tituloBox';*/\n    \n    // Adiciona uma nova class usando jquery\n    $(\"#titleMapaPercVisitaMunicipioObject\").addClass(\"tituloBox\");\n\n    title= \"Mapa de Percentual Visitado por Município  /\" + ano; \n    return title;\n    \n }",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "titleMapaPercVisitaMunicipioObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "9a1cd612-4f36-0be6-6526-6eceae59c2f4",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaMunicipio",
+      "type": "Id"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "mapaPercVisitaMunicipioDS"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "listeners",
+      "value": "['ciclo']",
+      "type": "Listeners"
+     },
+     {
+      "name": "htmlObject",
+      "value": "mapaPercVisitaMunicipioObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    \n    if(ano == \"\" && ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function () {\n    \n    if (document.getElementById(this.htmlObject).innerHTML.split(' ').join('').length == 1) {\n        // Customizar parametros se necessario: mapa, altura e largura.\n                                // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        criarMapa(this.htmlObject, 'mapaPercVisitaMunicipioResult', '/saude/flash/goias-municipios.swf', '300', '300');\n    } else {\n                   // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n        customizaMapa('mapaPercVisitaMunicipioResult');\t\n\t}\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\n        \n        // Customizar parametros se necessario: desc, limit1, text1, color1, limit2, text2, color2, limit3, text3, color3, limit4, text4, color4, text5, color5\n        var DATAROW = customMap(data, this.htmlObject, \"\", 80, 'Aceitável', '0xFF0000', '', 'Baixo', '0x00FF00', '', '', '', '', '', '', '', '');\n      \n     // v--- Informar aqui o nome da variavel que possui os dados de customiz. do mapa    \n      \tmapaPercVisitaMunicipioResult = DATAROW;\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "ae5938b4-d112-0c45-b024-cb2d7e7bacf8",
+    "type": "Componentsprpt",
+    "typeDesc": "PRPT Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "MunicipiosEntomologicoReport",
+      "type": "Id"
+     },
+     {
+      "name": "action",
+      "value": "MunicipiosEntomologicoReport.prpt",
+      "type": "String"
+     },
+     {
+      "name": "solution",
+      "value": "dengue",
+      "type": "String"
+     },
+     {
+      "name": "path",
+      "value": "res",
+      "type": "String"
+     },
+     {
+      "name": "htmlObject",
+      "value": "MunicipiosEntomologicoReportObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo','microregiao','mes']",
+      "type": "Listeners"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"microregiao\",\"microregiao\"],[\"mes\",\"mes\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "showParameters",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "paginate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "iframe",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    \n    if(mes == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "d020e9d2-32fe-fcb3-952e-d23f8ebc99b2",
+    "type": "ComponentstextComponent",
+    "typeDesc": "Text Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "fonte",
+      "type": "Id"
+     },
+     {
+      "name": "expression",
+      "value": "Fonte: SISFAD - Sistema de Informacao de Febre Amarela e Dengue.",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "FonteObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "638154cb-0b64-bd24-41a8-82ffccc803ca",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "ano",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "fff89c62-71e2-b508-b83c-c95ceb977ecd",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "ciclo",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "4dc8efa8-e77c-773a-947a-64c29bb45ba1",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "microregiao",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "af5c7ec1-7635-61b5-e6e6-f790efba08fd",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPNaceResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "3507989f-ff20-3163-196e-80042aca6668",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPMunicipioResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "49b7d50e-2a51-393a-4ed6-9afb0543eb54",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendNaceResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "15fc5d90-01a6-936f-8b32-2a2399af4b29",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendMunicipioResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "335be2e0-b71d-3d7b-dd29-c2b3c624320f",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaNaceResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "c46073ed-3ebb-529d-5417-6fd56d1d2041",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaMunicipioResult",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "fee4a62e-3569-9723-ab85-9d92f77a666e",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mes",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "7619d978-5da4-6d49-dc7b-05a96f3a4f93",
+    "type": "ComponentsParameter",
+    "typeDesc": "Parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "str_mes",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "CHARTS",
+    "name": "Charts",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Charts",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "bccc9d40-6a97-b8dd-1647-66033e8f597e",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartHistorico",
+      "type": "Id"
+     },
+     {
+      "name": "width",
+      "value": "690",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "200",
+      "type": "Integer"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "BarChartHistoricoDS"
+     },
+     {
+      "name": "cccCrosstabMode",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSeriesInRows",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccRenderCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccAnimate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickable",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickAction",
+      "value": "function(s,c,v){\n\n    Dashboards.fireChange('ano',encode_prepare(c));\n\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccSelectable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSelectionChangedAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTimeSeries",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccTimeSeriesFormat",
+      "value": "%Y-%m-%d",
+      "type": "String"
+     },
+     {
+      "name": "cccStacked",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccMaxBarSize",
+      "value": 100,
+      "type": "Integer"
+     },
+     {
+      "name": "cccPanelSizeRatio",
+      "value": 0.8,
+      "type": "Float"
+     },
+     {
+      "name": "cccBarSizeRatio",
+      "value": 0.9,
+      "type": "Float"
+     },
+     {
+      "name": "cccOrientation",
+      "value": "vertical",
+      "type": "MenuMode"
+     },
+     {
+      "name": "cccColors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccShowValues",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccValueFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccValuesAnchor",
+      "value": "right",
+      "type": "AnchorCenter"
+     },
+     {
+      "name": "title",
+      "value": "Série Histórica dos Índices Entomológicos de Dengue no Estado de Goiás",
+      "type": "String"
+     },
+     {
+      "name": "cccTitlePosition",
+      "value": "top",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccTitleSize",
+      "value": 25,
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowLegend",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccLegendPosition",
+      "value": "bottom",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccLegendSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccLegendAlign",
+      "value": "right",
+      "type": "SquareAlign"
+     },
+     {
+      "name": "cccShowXScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisPosition",
+      "value": "bottom",
+      "type": "TopBottom"
+     },
+     {
+      "name": "cccXAxisSize",
+      "value": 30,
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowYScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisPosition",
+      "value": "left",
+      "type": "LeftRight"
+     },
+     {
+      "name": "cccYAxisSize",
+      "value": 50,
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccXAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccYAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccYAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccBarLineDomainRoundMode",
+      "value": "none",
+      "type": "cccBarLineDomainRoundModeCustom"
+     },
+     {
+      "name": "cccXAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccYAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccBarLineDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccAxisOffset",
+      "value": "0",
+      "type": "Float"
+     },
+     {
+      "name": "cccOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccOrthoFixedMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "cccBarLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIndependentScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIdx",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccBarLineOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineTickColor",
+      "value": "blue",
+      "type": "String"
+     },
+     {
+      "name": "cccExtensionPoints",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "BarChartHistoricoObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     }
+    ]
+   },
+   {
+    "id": "43439034-2084-5bf1-134d-e22d6cad8328",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartCicloANo",
+      "type": "Id"
+     },
+     {
+      "name": "width",
+      "value": "690",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "250",
+      "type": "Integer"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "BarChartCicloAnoDS"
+     },
+     {
+      "name": "cccCrosstabMode",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSeriesInRows",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccRenderCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccAnimate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickable",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickAction",
+      "value": "function(s,c,v){\n\n    Dashboards.fireChange('ciclo',encode_prepare(c));\n\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccSelectable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSelectionChangedAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTimeSeries",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccTimeSeriesFormat",
+      "value": "%Y-%m-%d",
+      "type": "String"
+     },
+     {
+      "name": "cccStacked",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccMaxBarSize",
+      "value": 100,
+      "type": "Integer"
+     },
+     {
+      "name": "cccPanelSizeRatio",
+      "value": 0.8,
+      "type": "Float"
+     },
+     {
+      "name": "cccBarSizeRatio",
+      "value": 0.9,
+      "type": "Float"
+     },
+     {
+      "name": "cccOrientation",
+      "value": "vertical",
+      "type": "MenuMode"
+     },
+     {
+      "name": "cccColors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccShowValues",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccValueFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccValuesAnchor",
+      "value": "right",
+      "type": "AnchorCenter"
+     },
+     {
+      "name": "title",
+      "value": "Informações Entomológicas de Dengue por Ciclo (Bimestrais)",
+      "type": "String"
+     },
+     {
+      "name": "cccTitlePosition",
+      "value": "top",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccTitleSize",
+      "value": 25,
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowLegend",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccLegendPosition",
+      "value": "bottom",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccLegendSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccLegendAlign",
+      "value": "center",
+      "type": "SquareAlign"
+     },
+     {
+      "name": "cccShowXScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisPosition",
+      "value": "bottom",
+      "type": "TopBottom"
+     },
+     {
+      "name": "cccXAxisSize",
+      "value": 30,
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowYScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisPosition",
+      "value": "left",
+      "type": "LeftRight"
+     },
+     {
+      "name": "cccYAxisSize",
+      "value": 50,
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccXAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccYAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccYAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccBarLineDomainRoundMode",
+      "value": "none",
+      "type": "cccBarLineDomainRoundModeCustom"
+     },
+     {
+      "name": "cccXAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccYAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccBarLineDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccAxisOffset",
+      "value": "0",
+      "type": "Float"
+     },
+     {
+      "name": "cccOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccOrthoFixedMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "cccBarLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIndependentScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIdx",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccBarLineOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineTickColor",
+      "value": "blue",
+      "type": "String"
+     },
+     {
+      "name": "cccExtensionPoints",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "BarChartCicloAnoObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano']",
+      "type": "Listeners"
+     }
+    ]
+   },
+   {
+    "id": "2dc8cf32-7d57-5b42-1ff3-1ab59963b434",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartMicroregiao",
+      "type": "Id"
+     },
+     {
+      "name": "width",
+      "value": "690",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "250",
+      "type": "Integer"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "BarChartMicroregiaoDS"
+     },
+     {
+      "name": "cccCrosstabMode",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSeriesInRows",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccRenderCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccAnimate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickable",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickAction",
+      "value": "function(s,c,v){\n\n    Dashboards.fireChange('microregiao',encode_prepare(c));\n\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccSelectable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSelectionChangedAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTimeSeries",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccTimeSeriesFormat",
+      "value": "%Y-%m-%d",
+      "type": "String"
+     },
+     {
+      "name": "cccStacked",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccMaxBarSize",
+      "value": 100,
+      "type": "Integer"
+     },
+     {
+      "name": "cccPanelSizeRatio",
+      "value": 0.8,
+      "type": "Float"
+     },
+     {
+      "name": "cccBarSizeRatio",
+      "value": 0.9,
+      "type": "Float"
+     },
+     {
+      "name": "cccOrientation",
+      "value": "vertical",
+      "type": "MenuMode"
+     },
+     {
+      "name": "cccColors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccShowValues",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccValueFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccValuesAnchor",
+      "value": "right",
+      "type": "AnchorCenter"
+     },
+     {
+      "name": "title",
+      "value": "Informações Entomológicas de Dengue por Regional de Saúde",
+      "type": "String"
+     },
+     {
+      "name": "cccTitlePosition",
+      "value": "top",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccTitleSize",
+      "value": 25,
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowLegend",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccLegendPosition",
+      "value": "bottom",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccLegendSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccLegendAlign",
+      "value": "center",
+      "type": "SquareAlign"
+     },
+     {
+      "name": "cccShowXScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisPosition",
+      "value": "bottom",
+      "type": "TopBottom"
+     },
+     {
+      "name": "cccXAxisSize",
+      "value": "100",
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowYScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisPosition",
+      "value": "left",
+      "type": "LeftRight"
+     },
+     {
+      "name": "cccYAxisSize",
+      "value": "50",
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccXAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccYAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccYAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccBarLineDomainRoundMode",
+      "value": "none",
+      "type": "cccBarLineDomainRoundModeCustom"
+     },
+     {
+      "name": "cccXAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccYAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccBarLineDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccAxisOffset",
+      "value": "0",
+      "type": "Float"
+     },
+     {
+      "name": "cccOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccOrthoFixedMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "cccBarLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIndependentScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIdx",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccBarLineOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineTickColor",
+      "value": "blue",
+      "type": "String"
+     },
+     {
+      "name": "cccExtensionPoints",
+      "value": "[[\"xAxisLabel_textAngle\",\"45\"],[\"xAxisLabel_textAlign\",\"left\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "BarChartMicroregiaoObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(ciclo == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo']",
+      "type": "Listeners"
+     }
+    ]
+   },
+   {
+    "id": "94d8568f-e657-8a59-d630-62879be78573",
+    "type": "ComponentscccBarChart",
+    "typeDesc": "CCC Bar Chart",
+    "meta_cdwSupport": "true",
+    "parent": "CHARTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartMicroregiaoMes",
+      "type": "Id"
+     },
+     {
+      "name": "width",
+      "value": "690",
+      "type": "Integer"
+     },
+     {
+      "name": "height",
+      "value": "250",
+      "type": "Integer"
+     },
+     {
+      "name": "dataSource",
+      "type": "Datasource",
+      "value": "BarChartMicroregiaoMesDS"
+     },
+     {
+      "name": "cccCrosstabMode",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSeriesInRows",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccRenderCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccAnimate",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickable",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccClickAction",
+      "value": "function(s,c,v){\n\n    Dashboards.fireChange('mes',encode_prepare(c));\n\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccSelectable",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccSelectionChangedAction",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTimeSeries",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccTimeSeriesFormat",
+      "value": "%Y-%m-%d",
+      "type": "String"
+     },
+     {
+      "name": "cccStacked",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccMaxBarSize",
+      "value": 100,
+      "type": "Integer"
+     },
+     {
+      "name": "cccPanelSizeRatio",
+      "value": 0.8,
+      "type": "Float"
+     },
+     {
+      "name": "cccBarSizeRatio",
+      "value": 0.9,
+      "type": "Float"
+     },
+     {
+      "name": "cccOrientation",
+      "value": "vertical",
+      "type": "MenuMode"
+     },
+     {
+      "name": "cccColors",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccShowValues",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccValueFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccTooltipFormat",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "cccValuesAnchor",
+      "value": "right",
+      "type": "AnchorCenter"
+     },
+     {
+      "name": "title",
+      "value": "Informações Entomológicas Mensais de Dengue por Regional de Saúde",
+      "type": "String"
+     },
+     {
+      "name": "cccTitlePosition",
+      "value": "top",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccTitleSize",
+      "value": "20",
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowLegend",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccLegendPosition",
+      "value": "bottom",
+      "type": "Anchor"
+     },
+     {
+      "name": "cccLegendSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccLegendAlign",
+      "value": "right",
+      "type": "SquareAlign"
+     },
+     {
+      "name": "cccShowXScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisPosition",
+      "value": "bottom",
+      "type": "TopBottom"
+     },
+     {
+      "name": "cccXAxisSize",
+      "value": 30,
+      "type": "Integer"
+     },
+     {
+      "name": "cccShowYScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisPosition",
+      "value": "left",
+      "type": "LeftRight"
+     },
+     {
+      "name": "cccYAxisSize",
+      "value": 50,
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisFullGrid",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisEndLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccXAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccXAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccYAxisDomainRoundMode",
+      "value": "none",
+      "type": "cccYAxisDomainRoundModeCustom"
+     },
+     {
+      "name": "cccBarLineDomainRoundMode",
+      "value": "none",
+      "type": "cccBarLineDomainRoundModeCustom"
+     },
+     {
+      "name": "cccXAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccYAxisDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccBarLineDesiredTickCount",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "cccXAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccYAxisMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineMinorTicks",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccAxisOffset",
+      "value": "0",
+      "type": "Float"
+     },
+     {
+      "name": "cccOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccOrthoFixedMax",
+      "value": "",
+      "type": "Float"
+     },
+     {
+      "name": "cccBarLine",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIndependentScale",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineIdx",
+      "value": "[]",
+      "type": "Array"
+     },
+     {
+      "name": "cccBarLineOriginIsZero",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cccBarLineTickColor",
+      "value": "blue",
+      "type": "String"
+     },
+     {
+      "name": "cccExtensionPoints",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "xActionArrayParameter",
+      "value": "[[\"ano\",\"ano\"],[\"ciclo\",\"ciclo\"],[\"microregiao\",\"microregiao\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "htmlObject",
+      "value": "BarChartMicroregiaoMesObject",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "preExecution",
+      "value": "function() {\n    if(microregiao == \"\"){\n        return false;   \n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "listeners",
+      "value": "['ano','ciclo','microregiao']",
+      "type": "Listeners"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "SQL",
+    "name": "SQL Queries",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "SQL Queries",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "147978fb-f288-7c29-1106-e3476bd43aa3",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartHistoricoDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT Cast(tb1.ddtan_ano AS CHAR(4)) AS ano,\n       ROUND(CAST(SUM(tb1.iip) AS NUMERIC),2) AS \"Indice de Infestacao Predial\",\n       ROUND(CAST(SUM(tb1.pendencia) AS NUMERIC),2) AS \"Pendencia\",\n       ROUND(CAST(tb1.perc_visitado AS NUMERIC),2) AS \"% Visitado\"\nFROM\n    (SELECT b.ddtan_ano,\n       CASE WHEN (SELECT COUNT(a1.ddmu_id)\n\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \tINNER JOIN dengue.dengue_d_tempo_mes e1 ON (a1.ddtm_id = e1.ddtm_id)\n\t\t\tWHERE b1.ddtan_ano = b.ddtan_ano\n\t\t\t\tAND d1.ddco_informado = 'T'\n                        \tAND e1.ddtm_mes = e.ddtm_mes) = 0\n       THEN SUM(a.iden_iip)\n       ELSE ROUND(CAST(SUM(a.iden_iip) /(SELECT COUNT(a2.ddmu_id)\n\t\t\t\t\t\tFROM dengue.dengue_f_entomologico a2 \n\t\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n\t\t\t\t\t    \t\tINNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)\n\t\t\t\t\t\t\tINNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)\n\t\t\t\t                     INNER JOIN dengue.dengue_d_tempo_mes e2 ON (a2.ddtm_id = e2.ddtm_id)\n\t\t\t\t\t\tWHERE b2.ddtan_ano = b.ddtan_ano\n\t\t\t\t\t\t\tAND d2.ddco_informado = 'T'\n                        \t\t\t\tAND e2.ddtm_mes = e.ddtm_mes) AS NUMERIC),2)\n       END AS iip,\n       \n       CASE WHEN (SELECT COUNT(a1.ddmu_id)\n\t\t\tFROM dengue.dengue_f_entomologico a1 \n                     \tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \tINNER JOIN dengue.dengue_d_tempo_mes e1 ON (a1.ddtm_id = e1.ddtm_id)\n\t\t\tWHERE b1.ddtan_ano = b.ddtan_ano\n\t\t\t\tAND d1.ddco_informado = 'T'\n                    \t\tAND e1.ddtm_mes = e.ddtm_mes) = 0\n       THEN SUM(a.iden_pendencia)\n       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT COUNT(a2.ddmu_id)\n\t\t\t\t\t\tFROM dengue.dengue_f_entomologico a2 \n\t\t\t\t              \tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n\t\t\t\t\t    \t\tINNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)\n                        \t\t\t\tINNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)\n                        \t\t\t\tINNER JOIN dengue.dengue_d_tempo_mes e2 ON (a2.ddtm_id = e2.ddtm_id)\n\t\t\t\t\t\tWHERE b2.ddtan_ano = b.ddtan_ano\n\t\t\t\t\t\t\tAND d2.ddco_informado = 'T'\n                    \t\t\t\t\tAND e2.ddtm_mes = e.ddtm_mes) AS NUMERIC),2)\n       END AS pendencia,\n       \n       CASE WHEN (SELECT SUM(a1.iden_visita_meta)\n\t\t\tFROM dengue.dengue_f_entomologico a1 \n                     \tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \tINNER JOIN dengue.dengue_d_tempo_mes e1 ON (a1.ddtm_id = e1.ddtm_id)\n\t\t\tWHERE b1.ddtan_ano = b.ddtan_ano\n\t\t\t\tAND d1.ddco_informado = 'T') = 0\n       THEN SUM(a.iden_visita_realizada)\n       ELSE ROUND(CAST((SELECT(SUM(a2.iden_visita_realizada)*100)/SUM(a2.iden_visita_meta) AS perc_visitado_inf\n\t\t\t\tFROM dengue.dengue_f_entomologico a2 \n\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n\t\t\t\t\tINNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)\n                        \t\tINNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)\n                        \t\tINNER JOIN dengue.dengue_d_tempo_mes e2 ON (a2.ddtm_id = e2.ddtm_id)\n\t\t\t\tWHERE b2.ddtan_ano = b.ddtan_ano\n\t\t\t\t\tAND d2.ddco_informado = 'T') AS NUMERIC),2)\n       END AS perc_visitado,\n       d.ddco_informado\n       \n\tFROM dengue.dengue_f_entomologico a \n    \t\tINNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    \t\tINNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    \t\tINNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n        \tINNER JOIN dengue.dengue_d_tempo_mes e ON (a.ddtm_id = e.ddtm_id)\n\tGROUP BY b.ddtan_ano, e.ddtm_mes, d.ddco_informado\n\tHAVING d.ddco_informado = 'T') as tb1\nGROUP BY tb1.ddtan_ano, tb1.perc_visitado\nORDER BY tb1.ddtan_ano",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "c2967a82-6b3d-567a-367e-cf22c8a3413d",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartCicloAnoDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT CAST(e.ddtc_ciclo AS varchar(1)) AS ciclo,\n       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS iip_inf\n    \t\tFROM dengue.dengue_f_entomologico a1 \n                INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)\n\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\tAND d1.ddco_informado = 'T'\n                AND e1.ddtc_ciclo = e.ddtc_ciclo) = 0\n       THEN SUM(a.iden_iip)\n       ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a1.ddmu_id) AS iip_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n                        INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n \t\t                INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        AND e1.ddtc_ciclo = e.ddtc_ciclo) AS NUMERIC),2)\n       END AS \"Indice de Infestacao Predial\",\n       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS pend_inf\n\t\t\tFROM dengue.dengue_f_entomologico a1 \n                INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n \t\t        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)\n\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\tAND d1.ddco_informado = 'T'\n                AND e1.ddtc_ciclo = e.ddtc_ciclo) = 0\n       THEN SUM(a.iden_pendencia)\n       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT COUNT(a1.ddmu_id) AS pend_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n                        INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n \t\t        \t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        AND e1.ddtc_ciclo = e.ddtc_ciclo) AS NUMERIC),2)\n       END AS \"Pendencia\",\n       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS pend_inf\n\t\t\tFROM dengue.dengue_f_entomologico a1 \n                INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n \t\t        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)\n\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\tAND d1.ddco_informado = 'T'\n                AND e1.ddtc_ciclo = e.ddtc_ciclo) = 0\n       THEN SUM(a.iden_perc_visitado)\n       ELSE ROUND(CAST((SELECT (SUM(a1.iden_visita_realizada)*100)/SUM(a1.iden_visita_meta) AS pend_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n                        INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_ciclo)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        AND e1.ddtc_ciclo = e.ddtc_ciclo) AS NUMERIC),2)\n       END AS \"% Visitado\"\n\nFROM dengue.dengue_f_entomologico a \n    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_ciclo)\nWHERE b.ddtan_ano = ${ano}\nGROUP BY e.ddtc_ciclo\nORDER BY e.ddtc_ciclo",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "368c6f1f-4c5c-2eb6-37a5-4aabc90eba75",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPNaceDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT 'NACE'||CAST(c.ddmu_nace AS varchar(30)) AS \"nace\",\n       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS iip_inf\n    \t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\tAND d1.ddco_informado = 'T'\n                \t\tAND e1.ddtc_ciclo = ${ciclo}\n                \t\tAND c1.ddmu_nace = c.ddmu_nace) = 0\n       THEN SUM(a.iden_iip)\n       ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a1.ddmu_id) AS iip_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        \t\t\tAND e1.ddtc_ciclo = ${ciclo}\n                    \t\t\t\tAND c1.ddmu_nace = c.ddmu_nace) AS NUMERIC),2)\n       END AS iip\nFROM dengue.dengue_f_entomologico a \n    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\nWHERE b.ddtan_ano = ${ano}\nAND e.ddtc_ciclo = ${ciclo}\nGROUP BY c.ddmu_nace",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "de9bad9c-be82-a64b-8ab6-6ff54bb1ce27",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaIIPMunicipioDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT CAST(c.ddmu_municipio AS varchar(30)) as \"municipio\",\r\n       CASE WHEN (SELECT COUNT(a1.ddmu_id) as iip_inf\r\n    \t\tFROM dengue.dengue_f_entomologico a1\r\n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\r\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\r\n                \t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\r\n                \t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\r\n\t\t\tWHERE b1.ddtan_ano = ${ano}\r\n            \t\t\tAND c1.ddmu_id = c.ddmu_id\r\n                \t\tAND d1.ddco_informado = 'T'\r\n                \t\tAND e1.ddtc_ciclo = ${ciclo}) = 0\r\n       THEN SUM(a.iden_iip)\r\n       ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a1.ddmu_id) as iip_inf\r\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1\r\n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\r\n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\r\n                \t\t\t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\r\n                \t\t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\r\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\r\n\t                    \t\t\tAND c1.ddmu_id = c.ddmu_id\r\n            \t\t\t\t\tAND d1.ddco_informado = 'T'\r\n                        \t\t\tAND e1.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\r\n       END AS iip\r\nFROM dengue.dengue_f_entomologico a \r\n    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\r\n    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\r\n    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\r\n    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\r\nWHERE b.ddtan_ano = ${ano}\r\n\tAND e.ddtc_ciclo = ${ciclo}\r\nGROUP BY c.ddmu_municipio, c.ddmu_id",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "59cd704a-f6c6-223e-48db-a9fc7bab19d1",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendNaceDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT 'NACE'||CAST(c.ddmu_nace AS varchar(30)) AS \"nace\",\n       CASE WHEN (SELECT COUNT(a1.ddmu_id) AS pend_inf\n    \t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                \t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                \t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\tWHERE b1.ddtan_ano = ${ano}\n            \t\t\tAND e1.ddtc_ciclo = ${ciclo}\n\t\t\t\tAND d1.ddco_informado = 'T'\n\t\t              AND c1.ddmu_nace = c.ddmu_nace) = 0\n       THEN SUM(a.iden_pendencia)\n       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT COUNT(a1.ddmu_id) AS iip_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    \tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t                    \t\t\tAND e1.ddtc_ciclo = ${ciclo}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                    \t\t\t\tAND c1.ddmu_nace = c.ddmu_nace)  AS NUMERIC),2)\n       END AS pendencia\nFROM dengue.dengue_f_entomologico a \n    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\nWHERE b.ddtan_ano = ${ano}\n\tAND e.ddtc_ciclo = ${ciclo}\nGROUP BY c.ddmu_nace",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "d31d56e1-f15f-1788-18ee-5908fa81f277",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPendMunicipioDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT c.ddmu_municipio, \n       CASE WHEN (SELECT count(a1.ddmu_id) as pend_inf\n    \t\tFROM dengue.dengue_f_entomologico a1\n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                \t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                \t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t            \t\tAND c1.ddmu_id = c.ddmu_id\n                \t\tAND d1.ddco_informado = 'T'\n            \t\t\tAND e1.ddtc_ciclo = ${ciclo}) = 0\n       THEN SUM(a.iden_pendencia)\n       ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT count(a1.ddmu_id) as pend_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    \tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t                    \t\t\tAND c1.ddmu_id = c.ddmu_id\n                        \t\t\tAND d1.ddco_informado = 'T'\n\t                    \t\t\tAND e1.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n       END AS pendencia\nFROM dengue.dengue_f_entomologico a \n\tINNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    \tINNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    \tINNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n    \tINNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\nWHERE b.ddtan_ano = ${ano}\n\tAND e.ddtc_ciclo = ${ciclo}\nGROUP BY c.ddmu_municipio, c.ddmu_id\nORDER BY c.ddmu_municipio",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "9b778fd6-18c6-26d4-ddf3-503ad2e94bd8",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaNaceDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT 'NACE'||CAST(c.ddmu_nace AS varchar(30)) AS \"nace\",\n       CASE WHEN (SELECT SUM(a1.iden_visita_meta) AS perc_visitado_inf\n    \t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        AND e1.ddtc_ciclo = ${ciclo}\n                    \tAND c1.ddmu_nace = c.ddmu_nace) = 0\n       THEN SUM(a.iden_visita_realizada)\n       ELSE ROUND(CAST((SELECT(SUM(a1.iden_visita_realizada)*100)/SUM(a1.iden_visita_meta) AS perc_visitado_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    INNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        AND e1.ddtc_ciclo = ${ciclo}\n                    \tAND c1.ddmu_nace = c.ddmu_nace) AS NUMERIC),2)\n       END AS perc_visitado\nFROM dengue.dengue_f_entomologico a \n    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\nWHERE b.ddtan_ano = ${ano}\nAND e.ddtc_ciclo = ${ciclo}\nGROUP BY c.ddmu_nace",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "9bdc6bdc-b0d2-6f1c-bbbb-323dc13421a3",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "mapaPercVisitaMunicipioDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT CAST(c.ddmu_municipio AS varchar(30)) AS \"municipio\",\n       CASE WHEN (SELECT SUM(a1.iden_visita_meta) AS perc_visitado_inf\n    \t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    \tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        \t\t\tAND e1.ddtc_ciclo = ${ciclo}\n                    \t\t\t\tAND c1.ddmu_municipio = c.ddmu_municipio) = 0\n       THEN SUM(a.iden_visita_realizada)\n       ELSE ROUND(CAST((SELECT(SUM(a1.iden_visita_realizada)*100)/SUM(a1.iden_visita_meta) AS perc_visitado_inf\n\t\t\t\t\tFROM dengue.dengue_f_entomologico a1 \n\t\t\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n\t\t\t\t\t    \tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                        \t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n\t\t\t\t\tWHERE b1.ddtan_ano = ${ano}\n\t\t\t\t\t\tAND d1.ddco_informado = 'T'\n                        \t\t\tAND e1.ddtc_ciclo = ${ciclo}\n                    \t\t\t\tAND c1.ddmu_municipio = c.ddmu_municipio) AS NUMERIC),2)\n       END AS perc_visitado\nFROM dengue.dengue_f_entomologico a \n    INNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n    INNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n    INNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n    INNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\nWHERE b.ddtan_ano = ${ano}\nAND e.ddtc_ciclo = ${ciclo}\nGROUP BY c.ddmu_municipio",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "b9f72a62-9e0e-b64c-520e-e960c18c9ce6",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartMicroregiaoDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT tb1.ddmu_microregional AS \"microregiao\",\n       SUM(tb1.iip) AS \"Indice de Infestacao Predial\",\n       SUM(tb1.pendencia) AS \"Pendencia\",\n       SUM(tb1.perc_visitado) AS \"% Visitado\"\nFROM\n  (SELECT c.ddmu_microregional,\n         CASE WHEN (SELECT COUNT(a1.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a1\n                          INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id  = b1.ddtan_id)\n                          INNER JOIN dengue.dengue_d_municipios c1 on (a1.ddmu_id = c1.ddmu_id)\n                          INNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n                          INNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n                      WHERE b1.ddtan_ano = ${ano}\n                          AND c1.ddmu_microregional = c.ddmu_microregional\n                      \tAND d1.ddco_informado = 'T'\n                      \tAND e1.ddtc_ciclo = ${ciclo}) = 0\n         THEN SUM(a.iden_iip)\n         ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT count(a2.ddmu_id)\n                      \t\t\tFROM dengue.dengue_f_entomologico a2 \n                          \t\t\t\tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n                          \t\t\t\tINNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)\n                                        \t\tINNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)\n\t\t\t\t                     INNER JOIN dengue.dengue_d_tempo_ciclo e2 ON (a2.ddtc_id = e2.ddtc_id)\n                      \t\t\tWHERE b2.ddtan_ano = ${ano}\n   \t                      \t\t\tAND c2.ddmu_microregional = c.ddmu_microregional\n\t\t\t\t\t\t\tAND d2.ddco_informado = 'T'\n\t\t\t\t\t\t\tAND e2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n         END AS iip,\n         \n         CASE WHEN (SELECT count(a1.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a1 \n                          \tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_municipios c1 ON (a1.ddmu_id = c1.ddmu_id)\n \t\t\t\tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n                      WHERE b1.ddtan_ano = ${ano}\n\t\t\t\tAND c1.ddmu_microregional = c.ddmu_microregional\n                      \tAND d1.ddco_informado = 'T'\n                            AND e1.ddtc_ciclo = ${ciclo}) = 0\n         THEN SUM(a.iden_pendencia)\n         ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT count(a2.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a2 \n                          \tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_municipios c2 ON (a2.ddmu_id = c2.ddmu_id)\n                          \tINNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e2 ON (a2.ddtc_id = e2.ddtc_id)\n                      WHERE b2.ddtan_ano = ${ano}\n                      \t\tAND c2.ddmu_microregional = c.ddmu_microregional\n                            AND d2.ddco_informado = 'T'\n                            AND e2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n         END AS pendencia,\n         \n         CASE WHEN (SELECT count(a1.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a1 \n                          \tINNER JOIN dengue.dengue_d_tempo_ano b1 on (a1.ddtan_id = b1.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_municipios c1 on (a1.ddmu_id = c1.ddmu_id)\n                          \tINNER JOIN dengue.dengue_d_controles d1 ON (a1.ddco_id = d1.ddco_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e1 ON (a1.ddtc_id = e1.ddtc_id)\n                      WHERE b1.ddtan_ano = ${ano}\n                      \tAND c1.ddmu_microregional = c.ddmu_microregional\n                       \tAND d1.ddco_informado = 'T'\n                            AND e1.ddtc_ciclo = ${ciclo}) = 0\n         THEN SUM(a.iden_perc_visitado)\n         ELSE ROUND(CAST(SUM(a.iden_perc_visitado)/(SELECT count(a2.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a2\n                          \tINNER JOIN dengue.dengue_d_tempo_ano b2 on (a2.ddtan_id = b2.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_municipios c2 on (a2.ddmu_id = c2.ddmu_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_controles d2 ON (a2.ddco_id = d2.ddco_id)\n\t\t\t\tINNER JOIN dengue.dengue_d_tempo_ciclo e2 ON (a2.ddtc_id = e2.ddtc_id)\n                      WHERE b2.ddtan_ano = ${ano}\n\t                     AND c2.ddmu_microregional = c.ddmu_microregional\n                       \tAND d2.ddco_informado = 'T'\n                            AND e2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n         END AS perc_visitado\n  FROM dengue.dengue_f_entomologico a \n      \tINNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n      \tINNER JOIN dengue.dengue_d_municipios c ON (a.ddmu_id = c.ddmu_id)\n\tINNER JOIN dengue.dengue_d_controles d ON (a.ddco_id = d.ddco_id)\n\tINNER JOIN dengue.dengue_d_tempo_ciclo e ON (a.ddtc_id = e.ddtc_id)\n  WHERE b.ddtan_ano = ${ano}\n  GROUP BY c.ddmu_microregional, d.ddco_informado, e.ddtc_ciclo\n  HAVING d.ddco_informado = 'T' \n  \t\tAND e.ddtc_ciclo = ${ciclo}) AS tb1\n\nGROUP BY tb1.ddmu_microregional\nORDER BY tb1.ddmu_microregional",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   },
+   {
+    "id": "9db513d3-da8c-5aee-1f90-922148942b5a",
+    "type": "Componentssql_sqlJndi",
+    "typeDesc": "sql over sqlJndi",
+    "meta": "CDA",
+    "meta_conntype": "sql.jndi",
+    "meta_datype": "sql",
+    "parent": "SQL",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BarChartMicroregiaoMesDS",
+      "type": "Id"
+     },
+     {
+      "name": "jndi",
+      "value": "bisaudego",
+      "type": "Jndi"
+     },
+     {
+      "name": "access",
+      "value": "public",
+      "type": "Access"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"ano\",\"2008\",\"Integer\",\"\"],[\"ciclo\",\"2\",\"Integer\",\"\"],[\"microregiao\",\"CENTRAL\",\"String\",\"\"]]",
+      "type": "CdaParameters"
+     },
+     {
+      "name": "output",
+      "value": "[]",
+      "type": "IndexArray"
+     },
+     {
+      "name": "outputMode",
+      "value": "include",
+      "type": "OutputMode"
+     },
+     {
+      "name": "cdacolumns",
+      "value": "[]",
+      "type": "CdaColumnsArray"
+     },
+     {
+      "name": "cdacalculatedcolumns",
+      "value": "[]",
+      "type": "CdaCalculatedColumnsArray"
+     },
+     {
+      "name": "query",
+      "value": "SELECT CAST(tb1.ddtm_mes AS CHAR(2)) AS mes,\n       SUM(tb1.iip) AS \"Indice de Infestacao Predial\",\n       SUM(tb1.pendencia) AS \"Pendencia\",\n       SUM(tb1.perc_visitado) AS \"% Visitado\"\nFROM\n  (SELECT c.ddtm_mes,\n         CASE WHEN (SELECT COUNT(a1.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a1\n                              INNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_tempo_mes c1 ON (a1.ddtm_id = c1.ddtm_id)\n                          \tINNER JOIN dengue.dengue_d_municipios d1 on (a1.ddmu_id = d1.ddmu_id)\n                            INNER JOIN dengue.dengue_d_controles e1 ON (a1.ddco_id = e1.ddco_id)\n \t                     INNER JOIN dengue.dengue_d_tempo_ciclo f1 ON (a1.ddtc_id = f1.ddtc_id)\n                      WHERE b1.ddtan_ano = ${ano}\n                      \tAND c1.ddtm_mes = c.ddtm_mes\n\t\t\t\tAND d1.ddmu_microregional = ${microregiao}\n                      \tAND e1.ddco_informado = 'T'\n                            AND f1.ddtc_ciclo = ${ciclo}) = 0\n         THEN SUM(a.iden_iip)\n         ELSE ROUND(CAST(SUM(a.iden_iip)/(SELECT COUNT(a2.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a2\n                      \tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_tempo_mes c2 ON (a2.ddtm_id = c2.ddtm_id)\n                          \tINNER JOIN dengue.dengue_d_municipios d2 ON (a2.ddmu_id = d2.ddmu_id)\n                            INNER JOIN dengue.dengue_d_controles e2 ON (a2.ddco_id = e2.ddco_id)\n \t                     INNER JOIN dengue.dengue_d_tempo_ciclo f2 ON (a2.ddtc_id = f2.ddtc_id)\n                      WHERE b2.ddtan_ano = ${ano}\n                      \tAND c2.ddtm_mes = c.ddtm_mes\n\t\t\t\tAND d2.ddmu_microregional = ${microregiao}\n                      \tAND e2.ddco_informado = 'T'\n                            AND f2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n         END AS iip,\n         \n         CASE WHEN (SELECT COUNT(a1.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a1 \n                      \tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_tempo_mes c1 ON (a1.ddtm_id = c1.ddtm_id)\n                          \tINNER JOIN dengue.dengue_d_municipios d1 ON (a1.ddmu_id = d1.ddmu_id)\n                            INNER JOIN dengue.dengue_d_controles e1 ON (a1.ddco_id = e1.ddco_id)\n \t                     INNER JOIN dengue.dengue_d_tempo_ciclo f1 ON (a1.ddtc_id = f1.ddtc_id)\n                      WHERE b1.ddtan_ano = ${ano}\n                      \tAND c1.ddtm_mes = c.ddtm_mes\n\t\t\t\tAND d1.ddmu_microregional = ${microregiao}\n                      \tAND e1.ddco_informado = 'T'\n                            AND f1.ddtc_ciclo = ${ciclo}) = 0\n         THEN SUM(a.iden_pendencia)\n         ELSE ROUND(CAST(SUM(a.iden_pendencia)/(SELECT count(a2.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a2\n                      \tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_tempo_mes c2 ON (a2.ddtm_id = c2.ddtm_id)\n                          \tINNER JOIN dengue.dengue_d_municipios d2 ON (a2.ddmu_id = d2.ddmu_id)\n                            INNER JOIN dengue.dengue_d_controles e2 ON (a2.ddco_id = e2.ddco_id)\n \t                     INNER JOIN dengue.dengue_d_tempo_ciclo f2 ON (a2.ddtc_id = f2.ddtc_id)\n                      WHERE b2.ddtan_ano = ${ano}\n                      \tAND c2.ddtm_mes = c.ddtm_mes\n\t\t\t\tAND d2.ddmu_microregional = ${microregiao}\n                      \tAND e2.ddco_informado = 'T'\n                            AND f2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n         END AS pendencia,\n         \n         CASE WHEN (SELECT count(a1.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a1\n                      \tINNER JOIN dengue.dengue_d_tempo_ano b1 ON (a1.ddtan_id = b1.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_tempo_mes c1 ON (a1.ddtm_id = c1.ddtm_id)\n                          \tINNER JOIN dengue.dengue_d_municipios d1 ON (a1.ddmu_id = d1.ddmu_id)\n                            INNER JOIN dengue.dengue_d_controles e1 ON (a1.ddco_id = e1.ddco_id)\n \t                     INNER JOIN dengue.dengue_d_tempo_ciclo f1 ON (a1.ddtc_id = f1.ddtc_id)\n                      WHERE b1.ddtan_ano = ${ano}\n                      \tAND c1.ddtm_mes = c.ddtm_mes\n\t\t\t\tAND d1.ddmu_microregional = ${microregiao}\n                      \tAND e1.ddco_informado = 'T'\n                            AND f1.ddtc_ciclo = ${ciclo}) = 0\n         THEN SUM(a.iden_perc_visitado)\n         ELSE ROUND(CAST(SUM(a.iden_perc_visitado)/(SELECT COUNT(a2.ddmu_id)\n                      FROM dengue.dengue_f_entomologico a2\n                      \tINNER JOIN dengue.dengue_d_tempo_ano b2 ON (a2.ddtan_id = b2.ddtan_id)\n                          \tINNER JOIN dengue.dengue_d_tempo_mes c2 ON (a2.ddtm_id = c2.ddtm_id)\n                          \tINNER JOIN dengue.dengue_d_municipios d2 ON (a2.ddmu_id = d2.ddmu_id)\n                            INNER JOIN dengue.dengue_d_controles e2 ON (a2.ddco_id = e2.ddco_id)\n \t                     INNER JOIN dengue.dengue_d_tempo_ciclo f2 ON (a2.ddtc_id = f2.ddtc_id)\n                      WHERE b2.ddtan_ano = ${ano}\n                      \tAND c2.ddtm_mes = c.ddtm_mes\n\t\t\t\tAND d2.ddmu_microregional = ${microregiao}\n                      \tAND e2.ddco_informado = 'T'\n                            AND f2.ddtc_ciclo = ${ciclo}) AS NUMERIC),2)\n         END AS perc_visitado\n  FROM dengue.dengue_f_entomologico a \n      \tINNER JOIN dengue.dengue_d_tempo_ano b ON (a.ddtan_id = b.ddtan_id)\n      \tINNER JOIN dengue.dengue_d_tempo_mes c ON (a.ddtm_id = c.ddtm_id)\n      \tINNER JOIN dengue.dengue_d_municipios d on (a.ddmu_id = d.ddmu_id)\n\tINNER JOIN dengue.dengue_d_controles e ON (a.ddco_id = e.ddco_id)\n \tINNER JOIN dengue.dengue_d_tempo_ciclo f ON (a.ddtc_id = f.ddtc_id)\n  WHERE b.ddtan_ano = ${ano}\n  \t AND d.ddmu_microregional = ${microregiao}\n        AND e.ddco_informado  = 'T'\n        AND f.ddtc_ciclo = ${ciclo}\n  GROUP BY c.ddtm_mes, f.ddtc_ciclo) as tb1\n\nGROUP BY tb1.ddtm_mes\nORDER BY tb1.ddtm_mes",
+      "type": "SqlQuery"
+     },
+     {
+      "name": "cache",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "cacheDuration",
+      "value": 3600,
+      "type": "Integer"
+     }
+    ]
+   }
+  ]
+ },
+ "filename": "/dengue/paineis/entomologico.cdfde"
+}

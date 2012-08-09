@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="BarChartHistoricoDengueDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="BarChartRegionalDengueDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaCasosMunicipiosDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaIncidenciaRegionalDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaIncidenciaMunicipiosDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="BarChartAnoSemanaDengueDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="BarChartMunicipioSemanaDengueDS" type="sql.jndi">
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+      <Connection id="mapaCasosRegionalDS" type="mondrian.jndi">
+         <Catalog>/DengueV2/analises/dengue.xml</Catalog>
+         <Jndi>bisaudego</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartHistoricoDengueDS"
+               id="BarChartHistoricoDengueDS"
+               type="sql">
+      <Columns/>
+      <Parameters/>
+      <Query>SELECT Cast(ddte_ano AS CHAR(4)) AS ano,&#xD;
+       SUM(casos_dengue)         AS "Casos Notificados",&#xD;
+       SUM(total_obitos_ano)     AS "Obitos Confirmados"&#xD;
+FROM   (SELECT ddt.ddte_ano,&#xD;
+               SUM(dfc.qt_caso) AS casos_dengue,&#xD;
+               SUM(0)           AS total_obitos_ano&#xD;
+        FROM   dengue.dengue_f_casos AS dfc&#xD;
+               inner join dengue.dengue_d_tempo AS ddt&#xD;
+                 ON ddt.ddte_id = dfc.ddte_id&#xD;
+        GROUP  BY ddt.ddte_ano&#xD;
+        UNION&#xD;
+        SELECT ddt.ddte_ano,&#xD;
+               0                   AS casos_dengue,&#xD;
+               SUM(qt_obito) AS total_obitos_ano&#xD;
+        FROM   dengue.dengue_f_casos AS dfc&#xD;
+               inner join dengue.dengue_d_tempo AS ddt&#xD;
+                 ON ddt.ddte_id = dfc.ddte_id&#xD;
+        GROUP  BY ddte_ano) AS base&#xD;
+GROUP  BY base.ddte_ano&#xD;
+ORDER  BY base.ddte_ano</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartRegionalDengueDS"
+               id="BarChartRegionalDengueDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="Integer"/>
+      </Parameters>
+      <Query>select ddmu_microregional as microregional, sum(qt_caso) as "Casos Notificados" &#xD;
+from dengue.dengue_d_municipios a, dengue.dengue_d_tempo b, dengue.dengue_f_casos c&#xD;
+where&#xD;
+a.ddmu_id = c.ddmu_id and&#xD;
+b.ddte_id = c.ddte_id and&#xD;
+b.ddte_ano = ${ano}&#xD;
+group by ddmu_microregional&#xD;
+order by ddmu_microregional</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaCasosMunicipiosDS"
+               id="mapaCasosMunicipiosDS"
+               type="sql">
+      <Columns>
+         <Column idx="0">
+            <Name>Municipio</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Casos</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="Integer"/>
+      </Parameters>
+      <Query>select c.ddmu_municipio, sum(a.qt_caso) as casos&#xD;
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)&#xD;
+                             inner join dengue.dengue_d_municipios c on (a.ddmu_id = c.ddmu_id)&#xD;
+where b.ddte_ano = ${ano}&#xD;
+group by c.ddmu_municipio</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaIncidenciaRegionalDS"
+               id="mapaIncidenciaRegionalDS"
+               type="sql">
+      <Columns>
+         <Column idx="0">
+            <Name>Regional</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Incidencia</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="Integer"/>
+      </Parameters>
+      <Query>select b.ddmu_microregional, ((sum(qt_caso) / base2.populacao) * 100000) as incidencia_acum&#xD;
+from dengue.dengue_f_casos a inner join dengue.dengue_d_municipios b on (a.ddmu_id = b.ddmu_id)&#xD;
+                 			 inner join dengue.dengue_d_tempo c on (a.ddte_id = c.ddte_id),&#xD;
+	( select base.ddmu_microregional, sum(base.pop) as populacao&#xD;
+	  from ( select distinct ddmu_microregional, ddmu_populacao as pop&#xD;
+  			 from dengue.dengue_f_casos a inner join dengue.dengue_d_municipios b on (a.ddmu_id = b.ddmu_id)&#xD;
+                               			  inner join dengue.dengue_d_tempo c on (a.ddte_id = c.ddte_id)&#xD;
+  			 where ddte_ano = ${ano} ) as base&#xD;
+     	     group by base.ddmu_microregional ) as base2&#xD;
+where ddte_ano = ${ano} and&#xD;
+b.ddmu_microregional = base2.ddmu_microregional&#xD;
+group by b.ddmu_microregional, base2.populacao</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaIncidenciaMunicipiosDS"
+               id="mapaIncidenciaMunicipiosDS"
+               type="sql">
+      <Columns>
+         <Column idx="0">
+            <Name>Municipio</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Incidencia</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="Integer"/>
+      </Parameters>
+      <Query>select c.ddmu_municipio, sum(a.incidencia) as incidencia&#xD;
+from dengue.dengue_f_casos a inner join dengue.dengue_d_tempo b on (a.ddte_id = b.ddte_id)&#xD;
+			                 inner join dengue.dengue_d_municipios c on (a.ddmu_id = c.ddmu_id)&#xD;
+where b.ddte_ano = ${ano}&#xD;
+group by c.ddmu_municipio</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartAnoSemanaDengueDS"
+               id="BarChartAnoSemanaDengueDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="Integer"/>
+         <Parameter default="CENTRAL" name="microregiao" type="String"/>
+      </Parameters>
+      <Query>SELECT CAST(DDTE_SEMANA AS VARCHAR(2)) AS SEMANA, SUM(QT_CASO) AS "Casos Notificados"&#xD;
+FROM DENGUE.DENGUE_D_TEMPO A, DENGUE.DENGUE_D_MUNICIPIOS B, DENGUE.DENGUE_F_CASOS C&#xD;
+WHERE A.DDTE_ID = C.DDTE_ID AND B.DDMU_ID = C.DDMU_ID&#xD;
+AND A.DDTE_ANO = ${ano}&#xD;
+AND B.DDMU_MICROREGIONAL = ${microregiao}&#xD;
+GROUP BY DDTE_SEMANA&#xD;
+HAVING SUM(QT_CASO) &gt; 0&#xD;
+ORDER BY DDTE_SEMANA</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="BarChartMunicipioSemanaDengueDS"
+               id="BarChartMunicipioSemanaDengueDS"
+               type="sql">
+      <Columns/>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="Integer"/>
+         <Parameter default="DAMOLANDIA" name="municipio" type="String"/>
+      </Parameters>
+      <Query>select &#xD;
+cast(ddte_semana as varchar(2)) as semana,&#xD;
+sum(qt_caso) as "Casos Notificados"&#xD;
+from dengue.dengue_f_casos as dfc &#xD;
+inner join dengue.dengue_d_tempo as ddt&#xD;
+on ddt.ddte_id = dfc.ddte_id&#xD;
+inner join dengue.dengue_d_municipios as ddm&#xD;
+on ddm.ddmu_id = dfc.ddmu_id&#xD;
+where ddt.ddte_ano = ${ano} and &#xD;
+      ddm.ddmu_municipio = ${municipio}&#xD;
+group by ddte_semana&#xD;
+having sum(qt_caso) &gt; 0&#xD;
+order by ddte_semana</Query>
+   </DataAccess>
+   <DataAccess access="public" cache="true" cacheDuration="3600"
+               connection="mapaCasosRegionalDS"
+               id="mapaCasosRegionalDS"
+               type="mdx">
+      <BandedMode>compact</BandedMode>
+      <Columns>
+         <Column idx="0">
+            <Name>Regional</Name>
+         </Column>
+         <Column idx="1">
+            <Name>Casos</Name>
+         </Column>
+      </Columns>
+      <Parameters>
+         <Parameter default="2011" name="ano" type="String"/>
+      </Parameters>
+      <Query>select NON EMPTY {[Measures].[Casos]} ON COLUMNS,&#xD;
+NON EMPTY {[Municipio.Municipios].[CENTRO NORTE].Children, [Municipio.Municipios].[CENTRO OESTE].Children, [Municipio.Municipios].[NORDESTE].Children, [Municipio.Municipios].[SUDESTE].Children, [Municipio.Municipios].[SUDOESTE].Children} ON ROWS&#xD;
+from [Dengue]&#xD;
+where {[Data.Datas].[${ano}]}</Query>
+   </DataAccess>
+</CDADescriptor>
